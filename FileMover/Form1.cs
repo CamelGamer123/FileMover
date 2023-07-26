@@ -28,7 +28,7 @@ namespace FileMover
 
         private void toolStripFileOpenButton_Click(object sender, EventArgs eventArgs)
         {
-
+            selectSourceFilesButton_Click(sender, eventArgs);
         }
 
         private void toolStripFileSaveButton_Click(object sender, EventArgs eventArgs)
@@ -80,15 +80,10 @@ namespace FileMover
         {
             if (_folderPicker.ShowDialog() == CommonFileDialogResult.Ok)
             {
-                MessageBox.Show(@"You selected: " + _folderPicker.FileName);
-            }
-        }
+                // Get a list of all files in the selected folder recursively
+                string[] files = Directory.GetFiles(_folderPicker.FileName, "*.*", SearchOption.AllDirectories);
 
-        private void selectFilesDialogue_FileOk(object sender, System.ComponentModel.CancelEventArgs eventArgs)
-        {
-            // Get the file from the dialog
-            var file = selectFilesDialouge.FileName;
-            Console.WriteLine(file);
+            }
         }
 
         private void actionsListSaveLocationChangeButton_Click(object sender, EventArgs eventArgs)
@@ -97,6 +92,11 @@ namespace FileMover
             {
                 MessageBox.Show(@"You selected: " + _folderPicker.FileName);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

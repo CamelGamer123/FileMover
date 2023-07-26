@@ -51,12 +51,21 @@
             fileMoveProgressBar = new ProgressBar();
             fileMoveProgressBarLabel = new Label();
             selectFilesDialouge = new OpenFileDialog();
+            includedFileNamesListBox = new ListBox();
+            includedFileExtensionsListBox = new ListBox();
+            includedFileNamesListBoxLabel = new Label();
+            includedFileExtensionsListBoxLabel = new Label();
+            fileNameInputTextBox = new TextBox();
+            addFileNameButton = new Button();
+            fileNameExtensionTextBox = new TextBox();
+            addFileExtensioButton = new Button();
             menuStripTop.SuspendLayout();
             SuspendLayout();
             // 
             // menuStripTop
             // 
             resources.ApplyResources(menuStripTop, "menuStripTop");
+            menuStripTop.ImageScalingSize = new Size(20, 20);
             menuStripTop.Items.AddRange(new ToolStripItem[] { toolStripFileButton, toolStripAnalyzeButton, toolStripHelpButton });
             menuStripTop.Name = "menuStripTop";
             // 
@@ -189,12 +198,66 @@
             resources.ApplyResources(selectFilesDialouge, "selectFilesDialouge");
             selectFilesDialouge.InitialDirectory = "C:\\";
             selectFilesDialouge.ShowHiddenFiles = true;
-            selectFilesDialouge.FileOk += selectFilesDialogue_FileOk;
+            // 
+            // includedFileNamesListBox
+            // 
+            resources.ApplyResources(includedFileNamesListBox, "includedFileNamesListBox");
+            includedFileNamesListBox.FormattingEnabled = true;
+            includedFileNamesListBox.Name = "includedFileNamesListBox";
+            // 
+            // includedFileExtensionsListBox
+            // 
+            resources.ApplyResources(includedFileExtensionsListBox, "includedFileExtensionsListBox");
+            includedFileExtensionsListBox.FormattingEnabled = true;
+            includedFileExtensionsListBox.Name = "includedFileExtensionsListBox";
+            // 
+            // includedFileNamesListBoxLabel
+            // 
+            resources.ApplyResources(includedFileNamesListBoxLabel, "includedFileNamesListBoxLabel");
+            includedFileNamesListBoxLabel.Name = "includedFileNamesListBoxLabel";
+            includedFileNamesListBoxLabel.Click += label1_Click;
+            // 
+            // includedFileExtensionsListBoxLabel
+            // 
+            resources.ApplyResources(includedFileExtensionsListBoxLabel, "includedFileExtensionsListBoxLabel");
+            includedFileExtensionsListBoxLabel.Name = "includedFileExtensionsListBoxLabel";
+            // 
+            // fileNameInputTextBox
+            // 
+            resources.ApplyResources(fileNameInputTextBox, "fileNameInputTextBox");
+            fileNameInputTextBox.AllowDrop = true;
+            fileNameInputTextBox.Name = "fileNameInputTextBox";
+            // 
+            // addFileNameButton
+            // 
+            resources.ApplyResources(addFileNameButton, "addFileNameButton");
+            addFileNameButton.Name = "addFileNameButton";
+            addFileNameButton.UseVisualStyleBackColor = true;
+            // 
+            // fileNameExtensionTextBox
+            // 
+            resources.ApplyResources(fileNameExtensionTextBox, "fileNameExtensionTextBox");
+            fileNameExtensionTextBox.AllowDrop = true;
+            fileNameExtensionTextBox.Name = "fileNameExtensionTextBox";
+            // 
+            // addFileExtensioButton
+            // 
+            resources.ApplyResources(addFileExtensioButton, "addFileExtensioButton");
+            addFileExtensioButton.Name = "addFileExtensioButton";
+            addFileExtensioButton.UseVisualStyleBackColor = true;
             // 
             // MainWindow
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(addFileExtensioButton);
+            Controls.Add(fileNameExtensionTextBox);
+            Controls.Add(addFileNameButton);
+            Controls.Add(fileNameInputTextBox);
+            Controls.Add(includedFileExtensionsListBoxLabel);
+            Controls.Add(includedFileNamesListBoxLabel);
+            Controls.Add(includedFileExtensionsListBox);
+            Controls.Add(includedFileNamesListBox);
             Controls.Add(fileMoveProgressBarLabel);
             Controls.Add(fileMoveProgressBar);
             Controls.Add(optionsChangeActionsListSaveLocationButton);
@@ -238,5 +301,13 @@
         private ProgressBar fileMoveProgressBar;
         private Label fileMoveProgressBarLabel;
         private OpenFileDialog selectFilesDialouge;
+        private ListBox includedFileNamesListBox;
+        private ListBox includedFileExtensionsListBox;
+        private Label includedFileNamesListBoxLabel;
+        private Label includedFileExtensionsListBoxLabel;
+        private TextBox fileNameInputTextBox;
+        private Button addFileNameButton;
+        private TextBox fileNameExtensionTextBox;
+        private Button addFileExtensioButton;
     }
 }
