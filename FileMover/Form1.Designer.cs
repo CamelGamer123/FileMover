@@ -62,7 +62,7 @@
             optionsRemoveIdenticalFilesCheckbox = new CheckBox();
             optionsCaseInsensitiveCheckbox = new CheckBox();
             optionsPreserveFolderSystemStructureCheckbox = new CheckBox();
-            changeDestinationDirectoryButton = new Button();
+            selectDestinationDirectoryButton = new Button();
             menuStripTop.SuspendLayout();
             SuspendLayout();
             // 
@@ -269,17 +269,18 @@
             optionsPreserveFolderSystemStructureCheckbox.Name = "optionsPreserveFolderSystemStructureCheckbox";
             optionsPreserveFolderSystemStructureCheckbox.UseVisualStyleBackColor = true;
             // 
-            // changeDestinationDirectoryButton
+            // selectDestinationDirectoryButton
             // 
-            resources.ApplyResources(changeDestinationDirectoryButton, "changeDestinationDirectoryButton");
-            changeDestinationDirectoryButton.Name = "changeDestinationDirectoryButton";
-            changeDestinationDirectoryButton.UseVisualStyleBackColor = true;
+            resources.ApplyResources(selectDestinationDirectoryButton, "selectDestinationDirectoryButton");
+            selectDestinationDirectoryButton.Name = "selectDestinationDirectoryButton";
+            selectDestinationDirectoryButton.UseVisualStyleBackColor = true;
+            selectDestinationDirectoryButton.Click += selectDestinationDirectoryButton_Click;
             // 
             // MainWindow
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(changeDestinationDirectoryButton);
+            Controls.Add(selectDestinationDirectoryButton);
             Controls.Add(optionsPreserveFolderSystemStructureCheckbox);
             Controls.Add(optionsCaseInsensitiveCheckbox);
             Controls.Add(optionsRemoveIdenticalFilesCheckbox);
@@ -345,6 +346,6 @@
         private CheckBox optionsRemoveIdenticalFilesCheckbox;
         private CheckBox optionsCaseInsensitiveCheckbox;
         private CheckBox optionsPreserveFolderSystemStructureCheckbox;
-        private Button changeDestinationDirectoryButton;
+        private Button selectDestinationDirectoryButton;
     }
 }

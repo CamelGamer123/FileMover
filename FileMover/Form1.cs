@@ -375,39 +375,36 @@ namespace FileMover
             // This is a dual-purpose button, it can be used to select the destination directory or to start and stop the file moving process
             // Create the file moving thread
             var moveFilesThread = new Thread(MoveSelectedFiles);
-
-            // Check if the user has selected a destination directory
-            if (_destinationDirectory == "")
+            
+            // Check if the sourceFilesList
+            if (_includedFiles.Count < 1)
             {
-                // If the user has not selected a destination directory, open the folder picker
-                if (_folderPicker.ShowDialog() == CommonFileDialogResult.Ok)
-                {
-                    // Set the destination directory to the selected directory
-                    _destinationDirectory = _folderPicker.FileName;
-
-                    // Update the button text
-                    startButton.Text = @"Start";
-
-                    // Un-hide the changeDestinationDirectoryButton
-                    changeDestinationDirectoryButton.Visible = true;
-                }
+                // If the source files list is empty, display an error message
+                MessageBox.Show(@"No files to move selected. Please select files to move.");
             }
+            
+            else if (_destinationDirectory == "")
+            {
+                // If the destination directory has not been selected, display an error message
+                MessageBox.Show(@"No destination directory selected. Please select a destination directory.");
+            }
+            // Start the file moving process
+            moveFilesThread.Start();
+            startButton.Text = @"Stop";
+            
             if (moveFilesThread.IsAlive)
             {
                 // Stop the file moving process
                 moveFilesThread.Interrupt();
-            }
-
-            // Check if the sourceFilesList 
-            if (_includedFiles.Count < 1)
-            {
-                // If the source files list is empty, display an error message
-                MessageBox.Show(@"Please select a source directory.");
-            }
-            else
-            {
-                // Start the file moving process
-                moveFilesThread.Start();
+                
+                // Reset the progress bar
+                fileMoveProgressBar.Value = 0;
+                
+                // Display a message to the user
+                MessageBox.Show(@"File moving process stopped.");
+                
+                // Reset the button text
+                startButton.Text = @"Start";
             }
         }
 
@@ -430,6 +427,20 @@ namespace FileMover
 
             // Update the progress bar
             fileMoveProgressBar.PerformStep();
+        }
+
+        private void selectDestinationDirectoryButton_Click(object sender, EventArgs e)
+        {
+            // Check if the user has selected a destination directory
+            if (_destinationDirectory == "")
+            {
+                // If the user has not selected a destination directory, open the folder picker
+                if (_folderPicker.ShowDialog() == CommonFileDialogResult.Ok)
+                {
+                    // Set the destination directory to the selected directory
+                    _destinationDirectory = _folderPicker.FileName;
+                }
+            }
         }
     }
 }
