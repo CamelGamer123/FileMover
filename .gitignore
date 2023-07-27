@@ -1,0 +1,19 @@
+
+*.v2
+.vs/FileMover/v17/.suo
+.vs/FileMover/v17/.wsuo
+
+# Ignore NuGet Packages
+*.nupkg
+
+# Ignore idea folder
+.idea
+
+# Ignore Visual Studio Code
+.vs
+
+# Ignore all files in the bin directory
+FileMover/bin/*
+
+FileMover/obj/*
+
