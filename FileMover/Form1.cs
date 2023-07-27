@@ -1,7 +1,6 @@
 using System.Diagnostics;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using System.Text.RegularExpressions;
-using System.Windows.Forms;
 
 namespace FileMover
 {
@@ -19,19 +18,18 @@ namespace FileMover
         private List<string> _excludedFileExtensions = new List<string>();
 
         private string _destinationDirectory = "";
-        
-        private Thread _moveFilesThread;
+
 
         private CommonOpenFileDialog _folderPicker = new CommonOpenFileDialog()
         {
             IsFolderPicker = true,
-            InitialDirectory = "C:\\Users"
+            InitialDirectory = @"C:\Users\kylep\source\repos\FileMover\FileMover\Downloads"
         };
 
         public MainWindow()  // Called when the window is initialized 
         {
             InitializeComponent();
-            
+
             // Set the progress bar to the correct values
             fileMoveProgressBar.Minimum = 0;
             fileMoveProgressBar.Step = 1;
@@ -48,7 +46,7 @@ namespace FileMover
         {
 
         }
-        
+
 
         private void toolStripAnalyzeFileCountButton_Click(object sender, EventArgs eventArgs)
         {
@@ -69,7 +67,7 @@ namespace FileMover
         {
 
         }
-        
+
 
         private void toolStripHelpFeatureRequestButton_Click(object sender, EventArgs eventArgs)
         {
@@ -148,7 +146,6 @@ namespace FileMover
                 {
                     // The user refused the elevation.
                     // Do nothing and return directly ...
-                    return;
                 }
             }
         }
@@ -377,8 +374,8 @@ namespace FileMover
         {
             // This is a dual-purpose button, it can be used to select the destination directory or to start and stop the file moving process
             // Create the file moving thread
-            _moveFilesThread = new Thread(MoveSelectedFiles);
-            
+            var moveFilesThread = new Thread(MoveSelectedFiles);
+
             // Check if the user has selected a destination directory
             if (_destinationDirectory == "")
             {
@@ -395,12 +392,12 @@ namespace FileMover
                     changeDestinationDirectoryButton.Visible = true;
                 }
             }
-            if (_moveFilesThread.IsAlive)
+            if (moveFilesThread.IsAlive)
             {
                 // Stop the file moving process
-                _moveFilesThread.Interrupt();
+                moveFilesThread.Interrupt();
             }
-            
+
             // Check if the sourceFilesList 
             if (_includedFiles.Count < 1)
             {
@@ -410,11 +407,8 @@ namespace FileMover
             else
             {
                 // Start the file moving process
-                _moveFilesThread.Start();
+                moveFilesThread.Start();
             }
-            
-            
-            
         }
 
         private void MoveSelectedFiles()
@@ -430,8 +424,10 @@ namespace FileMover
 
         private void MoveFile(string sourcePath)
         {
-            // TODO: Move the file
-            
+            // Move the file to the destination directory
+            FileInfo fileInfo = new FileInfo(sourcePath);
+            fileInfo.MoveTo(_destinationDirectory + "\\" + fileInfo.Name);
+
             // Update the progress bar
             fileMoveProgressBar.PerformStep();
         }

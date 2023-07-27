@@ -117,322 +117,316 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;selectSourceFilesButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;leaveSourceFilesCheckbox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;toolStripFileSaveButton.Name" xml:space="preserve">
-    <value>toolStripFileSaveButton</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="editToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 20</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="toolStripHelpInfoButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;fileMoveProgressBarLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;fileNameExtensionTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="optionsChangeActionsListSaveLocationButton.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="fileListToolStripMenuItem.Text" xml:space="preserve">
-    <value>File List</value>
-  </data>
-  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
-    <value>Exit</value>
-  </data>
-  <data name="includedFileNamesListBoxLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>577, 27</value>
-  </data>
-  <data name="&gt;&gt;optionsLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="listBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>300, 123</value>
-  </data>
-  <data name="includedFileNamesListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>577, 45</value>
-  </data>
-  <data name="&gt;&gt;includedFileExtensionsListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripHelpButton.Name" xml:space="preserve">
-    <value>toolStripHelpButton</value>
-  </data>
-  <data name="toolStripFileOpenButton.Text" xml:space="preserve">
-    <value>Open</value>
-  </data>
-  <data name="&gt;&gt;selectSourceFilesButton.Name" xml:space="preserve">
-    <value>selectSourceFilesButton</value>
-  </data>
-  <data name="&gt;&gt;fileListToolStripMenuItem.Name" xml:space="preserve">
-    <value>fileListToolStripMenuItem</value>
-  </data>
-  <data name="editToolStripMenuItem.Text" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="&gt;&gt;checkBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;optionsCaseInsensitiveCheckbox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="listFoldersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="includedFileNamesListBoxLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;analyzeSelectedToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fileNameInputTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="includedFileExtensionsListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="closeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="toolStripAnalyzeFileCountButton.Text" xml:space="preserve">
-    <value>File Count</value>
-  </data>
-  <data name="&gt;&gt;menuStripTop.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;optionsSaveActionsListCheckbox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="optionsRemoveIdenticalFilesCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="menuStripTop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;optionsChangeActionsListSaveLocationButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listBox1.Name" xml:space="preserve">
-    <value>listBox1</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>File Mover</value>
-  </data>
-  <data name="&gt;&gt;editToolStripMenuItem.Name" xml:space="preserve">
-    <value>editToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;selectFilesDialouge.Name" xml:space="preserve">
-    <value>selectFilesDialouge</value>
-  </data>
-  <data name="toolStripHelpFeatureRequestButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="optionsSaveActionsListCheckbox.AccessibleDescription" xml:space="preserve">
-    <value>Toggles the action of saving all file moves to a file.</value>
+  <data name="startButton.Text" xml:space="preserve">
+    <value>Start Operation</value>
   </data>
   <data name="&gt;&gt;addFileExtensioButton.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;optionsRemoveIdenticalFilesCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="listBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="toolStripAnalyzeFolderCountButton.Text" xml:space="preserve">
-    <value>Folder Count</value>
-  </data>
-  <data name="addFileNameButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>577, 321</value>
-  </data>
-  <data name="&gt;&gt;fileToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolStripAnalyzeFileCountButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;optionsLeaveSourceFilesCheckbox.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;listFoldersToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;addFileExtensioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainWindow</value>
   </data>
-  <data name="&gt;&gt;optionsCaseInsensitiveCheckbox.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolStripFileSaveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripHelpFeatureRequestButton.Text" xml:space="preserve">
+    <value>Request A Feature</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="analyzeSelectedToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="&gt;&gt;includedFileNamesListBox.Name" xml:space="preserve">
+    <value>includedFileNamesListBox</value>
+  </data>
+  <data name="&gt;&gt;includedFileExtensionsListBoxLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="includedFileNamesListBoxLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>577, 27</value>
+  </data>
+  <data name="&gt;&gt;toolStripAnalyzeListFoldersButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileListToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;leaveSourceFilesCheckbox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;leaveSourceFilesCheckbox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="selectSourceFilesButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 415</value>
-  </data>
-  <data name="&gt;&gt;checkBox1.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="leaveSourceFilesCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;optionsPreserveFolderSystemStructureCheckbox.Name" xml:space="preserve">
-    <value>optionsPreserveFolderSystemStructureCheckbox</value>
-  </data>
-  <data name="&gt;&gt;changeActionsListSaveLocation.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;changeDestinationDirectoryButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
-    <value>checkBox1</value>
-  </data>
-  <data name="&gt;&gt;toolStripFileOpenButton.Name" xml:space="preserve">
-    <value>toolStripFileOpenButton</value>
-  </data>
-  <data name="&gt;&gt;addFileNameButton.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;toolStripHelpFeatureRequestButton.Name" xml:space="preserve">
-    <value>toolStripHelpFeatureRequestButton</value>
-  </data>
-  <data name="&gt;&gt;fileMoveProgressBar.Name" xml:space="preserve">
-    <value>fileMoveProgressBar</value>
-  </data>
-  <data name="&gt;&gt;changeDestinationDirectoryButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 20</value>
-  </data>
-  <data name="&gt;&gt;toolStripFileButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;includedFileNamesListBoxLabel.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;analyzeSelectedToolStripMenuItem.Name" xml:space="preserve">
-    <value>analyzeSelectedToolStripMenuItem</value>
-  </data>
-  <data name="optionsSaveActionsListCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;menuStripTop.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;fileMoveProgressBar.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;toolStripAnalyzeListFoldersButton.Name" xml:space="preserve">
-    <value>toolStripAnalyzeListFoldersButton</value>
-  </data>
-  <data name="&gt;&gt;addFileNameButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="fileMoveProgressBar.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="listBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="toolStripAnalyzeButton.Text" xml:space="preserve">
-    <value>Analyze</value>
-  </data>
-  <data name="listFilesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="&gt;&gt;toolStripAnalyzeButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;startButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripAnalyzeListFilesButton.Name" xml:space="preserve">
-    <value>toolStripAnalyzeListFilesButton</value>
-  </data>
-  <data name="&gt;&gt;optionsRemoveIdenticalFilesCheckbox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="fileListToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+  <data name="optionsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 27</value>
   </data>
   <data name="toolStripAnalyzeFileCountButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 22</value>
   </data>
-  <data name="newToolStripMenuItem.Text" xml:space="preserve">
-    <value>New</value>
+  <data name="addFileExtensioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>755, 321</value>
   </data>
-  <data name="changeDestinationDirectoryButton.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
+  <data name="&gt;&gt;listBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="toolStripAnalyzeListFoldersButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="fileNameExtensionTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>755, 292</value>
+  </data>
+  <data name="toolStripHelpInfoButton.Text" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="optionsLabel.Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="&gt;&gt;includedFileExtensionsListBoxLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;leaveSourceFilesCheckbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="optionsSaveActionsListCheckbox.AccessibleDescription" xml:space="preserve">
+    <value>Toggles the action of saving all file moves to a file.</value>
+  </data>
+  <data name="includedFileNamesListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;fileNameExtensionTextBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;optionsLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="optionsSaveActionsListCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;sourceFilesListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;optionsSaveActionsListCheckbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;changeActionsListSaveLocation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
+    <value>checkBox1</value>
+  </data>
+  <data name="&gt;&gt;startButton.Name" xml:space="preserve">
+    <value>startButton</value>
+  </data>
+  <data name="optionsPreserveFolderSystemStructureCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 155</value>
+  </data>
+  <data name="&gt;&gt;optionsLeaveSourceFilesCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripFileOpenButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 22</value>
+  </data>
+  <data name="closeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="&gt;&gt;includedFileNamesListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;optionsRemoveIdenticalFilesCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="startButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 415</value>
+  </data>
+  <data name="&gt;&gt;listBox1.Name" xml:space="preserve">
+    <value>listBox1</value>
+  </data>
+  <data name="&gt;&gt;includedFileNamesListBoxLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripHelpInfoButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripHelpButton.Name" xml:space="preserve">
+    <value>toolStripHelpButton</value>
+  </data>
+  <data name="toolStripHelpButton.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="fileMoveProgressBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 383</value>
+  </data>
+  <data name="&gt;&gt;selectFilesDialouge.Name" xml:space="preserve">
+    <value>selectFilesDialouge</value>
+  </data>
+  <data name="listFilesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="&gt;&gt;fileMoveProgressBar.Name" xml:space="preserve">
+    <value>fileMoveProgressBar</value>
+  </data>
+  <data name="includedFileExtensionsListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>755, 45</value>
+  </data>
+  <data name="&gt;&gt;optionsPreserveFolderSystemStructureCheckbox.Name" xml:space="preserve">
+    <value>optionsPreserveFolderSystemStructureCheckbox</value>
+  </data>
+  <data name="&gt;&gt;fileNameInputTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="toolStripFileButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
+  </data>
+  <data name="&gt;&gt;newToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>944, 598</value>
+  </data>
+  <data name="toolStripAnalyzeFolderCountButton.Text" xml:space="preserve">
+    <value>Folder Count</value>
+  </data>
+  <data name="&gt;&gt;toolStripAnalyzeButton.Name" xml:space="preserve">
+    <value>toolStripAnalyzeButton</value>
+  </data>
+  <data name="optionsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
   </data>
   <data name="&gt;&gt;addFileNameButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;optionsSaveActionsListCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="infoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
   </data>
-  <data name="&gt;&gt;listBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;changeActionsListSaveLocation.Parent" xml:space="preserve">
+  <data name="&gt;&gt;optionsCaseInsensitiveCheckbox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="addFileNameButton.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+  <data name="menuStripTop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="&gt;&gt;selectSourceFilesButton.ZOrder" xml:space="preserve">
-    <value>19</value>
+  <data name="&gt;&gt;saveToolStripMenuItem.Name" xml:space="preserve">
+    <value>saveToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;leaveSourceFilesCheckbox.Name" xml:space="preserve">
-    <value>leaveSourceFilesCheckbox</value>
+  <data name="&gt;&gt;selectFilesDialouge.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripHelpFeatureRequestButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolStripAnalyzeListFilesButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>339, 105</value>
+  <data name="&gt;&gt;menuStripTop.ZOrder" xml:space="preserve">
+    <value>21</value>
   </data>
-  <data name="&gt;&gt;addFileExtensioButton.Name" xml:space="preserve">
-    <value>addFileExtensioButton</value>
+  <data name="&gt;&gt;addFileNameButton.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
-  <data name="optionsChangeActionsListSaveLocationButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 67</value>
+  <data name="&gt;&gt;toolStripHelpButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 20</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;optionsChangeActionsListSaveLocationButton.Name" xml:space="preserve">
+    <value>optionsChangeActionsListSaveLocationButton</value>
+  </data>
+  <data name="&gt;&gt;selectSourceFilesButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="fileMoveProgressBarLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>484, 365</value>
+  </data>
+  <data name="&gt;&gt;changeActionsListSaveLocation.Name" xml:space="preserve">
+    <value>changeActionsListSaveLocation</value>
+  </data>
+  <data name="&gt;&gt;optionsRemoveIdenticalFilesCheckbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="openToolStripMenuItem.Text" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="&gt;&gt;fileMoveProgressBarLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;optionsLabel.Name" xml:space="preserve">
+    <value>optionsLabel</value>
+  </data>
+  <data name="&gt;&gt;includedFileNamesListBoxLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;includedFileNamesListBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;optionsLeaveSourceFilesCheckbox.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;listBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="sourceFilesListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 27</value>
+  </data>
+  <data name="&gt;&gt;fileToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;optionsCaseInsensitiveCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="includedFileExtensionsListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="includedFileNamesListBoxLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;exitToolStripMenuItem.Name" xml:space="preserve">
+    <value>exitToolStripMenuItem</value>
+  </data>
+  <data name="includedFileNamesListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>577, 45</value>
+  </data>
+  <data name="&gt;&gt;includedFileExtensionsListBox.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="optionsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>300, 70</value>
+  <data name="changeDestinationDirectoryButton.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="leaveSourceFilesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 45</value>
+  </data>
+  <data name="selectFilesDialouge.Title" xml:space="preserve">
+    <value>Select file or folder as source</value>
+  </data>
+  <data name="&gt;&gt;fileNameInputTextBox.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="toolStripFileSaveButton.Text" xml:space="preserve">
     <value>Save</value>
@@ -440,585 +434,591 @@
   <data name="&gt;&gt;fileToolStripMenuItem.Name" xml:space="preserve">
     <value>fileToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;fileNameInputTextBox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="toolStripHelpInfoButton.Text" xml:space="preserve">
-    <value>Info</value>
-  </data>
-  <data name="&gt;&gt;optionsCaseInsensitiveCheckbox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;changeActionsListSaveLocation.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="sourceFilesListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;leaveSourceFilesCheckbox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;changeActionsListSaveLocation.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="toolStripAnalyzeListFoldersButton.Text" xml:space="preserve">
-    <value>List Folders</value>
-  </data>
-  <data name="&gt;&gt;listBox2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;listBox2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="optionsCaseInsensitiveCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>300, 130</value>
-  </data>
-  <data name="menuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="menuStripTop.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="changeActionsListSaveLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 67</value>
-  </data>
-  <data name="&gt;&gt;openToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;requestToolStripMenuItem.Name" xml:space="preserve">
-    <value>requestToolStripMenuItem</value>
-  </data>
-  <data name="infoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="&gt;&gt;optionsChangeActionsListSaveLocationButton.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;saveToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;includedFileExtensionsListBox.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;fileMoveProgressBar.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;listFoldersToolStripMenuItem.Name" xml:space="preserve">
-    <value>listFoldersToolStripMenuItem</value>
-  </data>
-  <data name="fileMoveProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 383</value>
-  </data>
-  <data name="toolStripHelpButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 20</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>MainWindow</value>
-  </data>
-  <data name="toolStripAnalyzeButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
-  </data>
-  <data name="&gt;&gt;includedFileExtensionsListBoxLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="includedFileExtensionsListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>755, 45</value>
-  </data>
-  <data name="optionsRemoveIdenticalFilesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>300, 105</value>
-  </data>
-  <data name="&gt;&gt;openToolStripMenuItem.Name" xml:space="preserve">
-    <value>openToolStripMenuItem</value>
-  </data>
-  <data name="toolStripFileSaveButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="analyzeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
-  </data>
-  <data name="fileNameInputTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;optionsPreserveFolderSystemStructureCheckbox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;includedFileExtensionsListBoxLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;includedFileExtensionsListBoxLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;folderCountToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;requestToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="optionsSaveActionsListCheckbox.Text" xml:space="preserve">
-    <value>Save actions list</value>
-  </data>
-  <data name="&gt;&gt;optionsRemoveIdenticalFilesCheckbox.Name" xml:space="preserve">
-    <value>optionsRemoveIdenticalFilesCheckbox</value>
-  </data>
-  <data name="saveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="addFileExtensioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>755, 321</value>
-  </data>
-  <data name="&gt;&gt;fileNameInputTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;startButton.ZOrder" xml:space="preserve">
-    <value>18</value>
   </data>
   <data name="&gt;&gt;optionsPreserveFolderSystemStructureCheckbox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;fileMoveProgressBarLabel.Name" xml:space="preserve">
-    <value>fileMoveProgressBarLabel</value>
-  </data>
-  <data name="analyzeSelectedToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="&gt;&gt;listBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;folderCountToolStripMenuItem.Name" xml:space="preserve">
-    <value>folderCountToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;newToolStripMenuItem.Name" xml:space="preserve">
-    <value>newToolStripMenuItem</value>
-  </data>
-  <data name="toolStripAnalyzeListFilesButton.Text" xml:space="preserve">
-    <value>List Files</value>
-  </data>
-  <data name="&gt;&gt;optionsSaveActionsListCheckbox.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="toolStripFileButton.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
-  <data name="&gt;&gt;toolStripAnalyzeFolderCountButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="listBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;toolStripAnalyzeListFoldersButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolStripAnalyzeListFilesButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="&gt;&gt;fileNameInputTextBox.Name" xml:space="preserve">
-    <value>fileNameInputTextBox</value>
-  </data>
-  <data name="selectFilesDialouge.Title" xml:space="preserve">
-    <value>Select file or folder as source</value>
-  </data>
-  <data name="&gt;&gt;analyzeToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;includedFileExtensionsListBoxLabel.Name" xml:space="preserve">
-    <value>includedFileExtensionsListBoxLabel</value>
-  </data>
-  <data name="addFileExtensioButton.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="optionsChangeActionsListSaveLocationButton.Text" xml:space="preserve">
-    <value>Change Actions list save location</value>
-  </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
-  </data>
-  <data name="&gt;&gt;includedFileNamesListBox.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="startButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>944, 598</value>
-  </data>
-  <data name="&gt;&gt;toolStripHelpInfoButton.Name" xml:space="preserve">
-    <value>toolStripHelpInfoButton</value>
-  </data>
-  <data name="&gt;&gt;toolStripHelpInfoButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="optionsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="&gt;&gt;menuStripTop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="optionsSaveActionsListCheckbox.AccessibleName" xml:space="preserve">
-    <value>Save actions list checkbox</value>
-  </data>
   <data name="fileMoveProgressBarLabel.Text" xml:space="preserve">
     <value>Operation progress</value>
   </data>
-  <data name="&gt;&gt;selectSourceFilesButton.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="fileMoveProgressBarLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
   </data>
-  <data name="&gt;&gt;analyzeToolStripMenuItem.Name" xml:space="preserve">
-    <value>analyzeToolStripMenuItem</value>
+  <data name="fileMoveProgressBar.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
-  <data name="&gt;&gt;infoToolStripMenuItem.Name" xml:space="preserve">
-    <value>infoToolStripMenuItem</value>
+  <data name="&gt;&gt;toolStripAnalyzeListFoldersButton.Name" xml:space="preserve">
+    <value>toolStripAnalyzeListFoldersButton</value>
   </data>
-  <data name="optionsLabel.Text" xml:space="preserve">
-    <value>Options</value>
+  <data name="newToolStripMenuItem.Text" xml:space="preserve">
+    <value>New</value>
   </data>
-  <data name="&gt;&gt;toolStripAnalyzeListFilesButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;optionsSaveActionsListCheckbox.Name" xml:space="preserve">
-    <value>optionsSaveActionsListCheckbox</value>
-  </data>
-  <data name="&gt;&gt;helpToolStripMenuItem.Name" xml:space="preserve">
-    <value>helpToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;saveToolStripMenuItem.Name" xml:space="preserve">
-    <value>saveToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;changeActionsListSaveLocation.Name" xml:space="preserve">
-    <value>changeActionsListSaveLocation</value>
-  </data>
-  <data name="&gt;&gt;editToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="changeActionsListSaveLocation.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;toolStripAnalyzeFolderCountButton.Name" xml:space="preserve">
-    <value>toolStripAnalyzeFolderCountButton</value>
-  </data>
-  <data name="&gt;&gt;listFoldersToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;startButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;sourceFilesListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="optionsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>300, 27</value>
-  </data>
-  <data name="toolStripAnalyzeFolderCountButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="folderCountToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 22</value>
   </data>
-  <data name="fileNameInputTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>577, 292</value>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>944, 24</value>
   </data>
-  <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="optionsCaseInsensitiveCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;fileNameExtensionTextBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;changeDestinationDirectoryButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;optionsPreserveFolderSystemStructureCheckbox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;toolStripFileSaveButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;includedFileNamesListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripAnalyzeButton.Name" xml:space="preserve">
-    <value>toolStripAnalyzeButton</value>
-  </data>
-  <data name="optionsPreserveFolderSystemStructureCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="requestToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="&gt;&gt;selectFilesDialouge.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;sourceFilesListBox.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="optionsLeaveSourceFilesCheckbox.Text" xml:space="preserve">
-    <value>Do not remove original files</value>
-  </data>
-  <data name="&gt;&gt;includedFileExtensionsListBox.Name" xml:space="preserve">
-    <value>includedFileExtensionsListBox</value>
-  </data>
-  <data name="&gt;&gt;includedFileNamesListBox.Name" xml:space="preserve">
-    <value>includedFileNamesListBox</value>
-  </data>
-  <data name="leaveSourceFilesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>300, 45</value>
-  </data>
-  <data name="listBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>442, 123</value>
-  </data>
-  <data name="&gt;&gt;changeActionsListSaveLocation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="includedFileExtensionsListBoxLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;closeToolStripMenuItem.Name" xml:space="preserve">
-    <value>closeToolStripMenuItem</value>
-  </data>
-  <data name="optionsLeaveSourceFilesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>300, 45</value>
-  </data>
-  <data name="includedFileNamesListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;optionsLeaveSourceFilesCheckbox.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;includedFileNamesListBoxLabel.Name" xml:space="preserve">
-    <value>includedFileNamesListBoxLabel</value>
-  </data>
-  <data name="toolStripFileButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
-  </data>
-  <data name="&gt;&gt;toolStripAnalyzeFileCountButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;startButton.Name" xml:space="preserve">
-    <value>startButton</value>
-  </data>
-  <data name="includedFileExtensionsListBoxLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>755, 27</value>
-  </data>
-  <data name="&gt;&gt;listFilesToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="startButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 415</value>
-  </data>
-  <data name="&gt;&gt;toolStripFileOpenButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripHelpButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;folderCountToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="newToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 22</value>
   </data>
-  <data name="&gt;&gt;menuStripTop.Name" xml:space="preserve">
-    <value>menuStripTop</value>
-  </data>
-  <data name="&gt;&gt;closeToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;requestToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+  <data name="addFileNameButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>577, 321</value>
   </data>
-  <data name="&gt;&gt;includedFileNamesListBoxLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;analyzeToolStripMenuItem.Name" xml:space="preserve">
+    <value>analyzeToolStripMenuItem</value>
   </data>
-  <data name="toolStripHelpButton.Text" xml:space="preserve">
-    <value>Help</value>
-  </data>
-  <data name="fileNameExtensionTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;optionsChangeActionsListSaveLocationButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;includedFileNamesListBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;fileNameExtensionTextBox.Name" xml:space="preserve">
-    <value>fileNameExtensionTextBox</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fileMoveProgressBarLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;fileMoveProgressBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="optionsChangeActionsListSaveLocationButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;includedFileNamesListBoxLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listFilesToolStripMenuItem.Name" xml:space="preserve">
-    <value>listFilesToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;infoToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="optionsLeaveSourceFilesCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;optionsLabel.Name" xml:space="preserve">
-    <value>optionsLabel</value>
-  </data>
-  <data name="&gt;&gt;fileMoveProgressBarLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="folderCountToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="&gt;&gt;helpToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;optionsRemoveIdenticalFilesCheckbox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;optionsLeaveSourceFilesCheckbox.Name" xml:space="preserve">
-    <value>optionsLeaveSourceFilesCheckbox</value>
-  </data>
-  <data name="&gt;&gt;listBox2.Name" xml:space="preserve">
-    <value>listBox2</value>
-  </data>
-  <data name="sourceFilesListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 27</value>
-  </data>
-  <data name="&gt;&gt;optionsLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="menuStripTop.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;addFileNameButton.Name" xml:space="preserve">
-    <value>addFileNameButton</value>
-  </data>
-  <data name="&gt;&gt;includedFileExtensionsListBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;listBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fileNameExtensionTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="fileMoveProgressBarLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>484, 365</value>
-  </data>
-  <data name="&gt;&gt;exitToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolStripFileOpenButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="changeDestinationDirectoryButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 354</value>
-  </data>
-  <data name="&gt;&gt;toolStripFileButton.Name" xml:space="preserve">
-    <value>toolStripFileButton</value>
-  </data>
-  <data name="&gt;&gt;addFileExtensioButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;changeDestinationDirectoryButton.Name" xml:space="preserve">
-    <value>changeDestinationDirectoryButton</value>
-  </data>
-  <data name="&gt;&gt;toolStripAnalyzeFileCountButton.Name" xml:space="preserve">
-    <value>toolStripAnalyzeFileCountButton</value>
-  </data>
-  <data name="fileMoveProgressBarLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="selectSourceFilesButton.Text" xml:space="preserve">
-    <value>Select Files </value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="fileMoveProgressBarLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>944, 24</value>
-  </data>
-  <data name="&gt;&gt;optionsLeaveSourceFilesCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="fileNameExtensionTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>755, 292</value>
-  </data>
-  <data name="&gt;&gt;optionsCaseInsensitiveCheckbox.Name" xml:space="preserve">
-    <value>optionsCaseInsensitiveCheckbox</value>
-  </data>
-  <data name="&gt;&gt;optionsChangeActionsListSaveLocationButton.Name" xml:space="preserve">
-    <value>optionsChangeActionsListSaveLocationButton</value>
-  </data>
-  <data name="&gt;&gt;leaveSourceFilesCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;sourceFilesListBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="openToolStripMenuItem.Text" xml:space="preserve">
-    <value>Open</value>
-  </data>
-  <data name="startButton.Text" xml:space="preserve">
-    <value>Start Operation</value>
-  </data>
-  <data name="&gt;&gt;exitToolStripMenuItem.Name" xml:space="preserve">
-    <value>exitToolStripMenuItem</value>
-  </data>
-  <data name="toolStripHelpFeatureRequestButton.Text" xml:space="preserve">
-    <value>Request A Feature</value>
-  </data>
-  <data name="&gt;&gt;sourceFilesListBox.Name" xml:space="preserve">
-    <value>sourceFilesListBox</value>
-  </data>
-  <data name="selectSourceFilesButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="optionsSaveActionsListCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>300, 70</value>
   </data>
-  <data name="&gt;&gt;listBox1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;toolStripFileOpenButton.Name" xml:space="preserve">
+    <value>toolStripFileOpenButton</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;newToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="toolStripHelpInfoButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
   </data>
-  <data name="&gt;&gt;fileListToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="optionsPreserveFolderSystemStructureCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>300, 155</value>
+  <data name="&gt;&gt;listBox2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;optionsLabel.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="closeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="&gt;&gt;selectSourceFilesButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="sourceFilesListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;listBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;helpToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addFileExtensioButton.Name" xml:space="preserve">
+    <value>addFileExtensioButton</value>
+  </data>
+  <data name="toolStripFileOpenButton.Text" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="listBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="optionsCaseInsensitiveCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 130</value>
+  </data>
+  <data name="toolStripFileButton.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="selectSourceFilesButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;optionsLeaveSourceFilesCheckbox.Name" xml:space="preserve">
+    <value>optionsLeaveSourceFilesCheckbox</value>
+  </data>
+  <data name="&gt;&gt;fileNameExtensionTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;optionsPreserveFolderSystemStructureCheckbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>339, 105</value>
+  </data>
+  <data name="optionsChangeActionsListSaveLocationButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>415, 67</value>
+  </data>
+  <data name="&gt;&gt;sourceFilesListBox.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="toolStripHelpButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 20</value>
+  </data>
+  <data name="optionsChangeActionsListSaveLocationButton.Text" xml:space="preserve">
+    <value>Change Actions list save location</value>
+  </data>
+  <data name="&gt;&gt;toolStripAnalyzeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripAnalyzeFolderCountButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="fileNameExtensionTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;optionsLeaveSourceFilesCheckbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="editToolStripMenuItem.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;fileNameInputTextBox.Name" xml:space="preserve">
+    <value>fileNameInputTextBox</value>
+  </data>
+  <data name="&gt;&gt;changeDestinationDirectoryButton.Name" xml:space="preserve">
+    <value>changeDestinationDirectoryButton</value>
+  </data>
+  <data name="&gt;&gt;optionsRemoveIdenticalFilesCheckbox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;fileNameExtensionTextBox.Name" xml:space="preserve">
+    <value>fileNameExtensionTextBox</value>
+  </data>
+  <data name="toolStripAnalyzeListFoldersButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 22</value>
   </data>
-  <metadata name="selectFilesDialouge.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>132, 19</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
-  </metadata>
+  <data name="&gt;&gt;editToolStripMenuItem.Name" xml:space="preserve">
+    <value>editToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;optionsSaveActionsListCheckbox.Name" xml:space="preserve">
+    <value>optionsSaveActionsListCheckbox</value>
+  </data>
+  <data name="addFileNameButton.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;fileMoveProgressBarLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="optionsRemoveIdenticalFilesCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="toolStripAnalyzeButton.Text" xml:space="preserve">
+    <value>Analyze</value>
+  </data>
+  <data name="&gt;&gt;optionsRemoveIdenticalFilesCheckbox.Name" xml:space="preserve">
+    <value>optionsRemoveIdenticalFilesCheckbox</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>File Mover</value>
+  </data>
+  <data name="&gt;&gt;fileMoveProgressBarLabel.Name" xml:space="preserve">
+    <value>fileMoveProgressBarLabel</value>
+  </data>
+  <data name="optionsChangeActionsListSaveLocationButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;includedFileExtensionsListBoxLabel.Name" xml:space="preserve">
+    <value>includedFileExtensionsListBoxLabel</value>
+  </data>
+  <data name="&gt;&gt;toolStripHelpFeatureRequestButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="fileListToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="&gt;&gt;optionsCaseInsensitiveCheckbox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;changeDestinationDirectoryButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;addFileExtensioButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;optionsPreserveFolderSystemStructureCheckbox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="closeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="&gt;&gt;fileMoveProgressBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addFileNameButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;fileMoveProgressBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;includedFileExtensionsListBox.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;fileMoveProgressBarLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;includedFileNamesListBoxLabel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="toolStripHelpFeatureRequestButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="&gt;&gt;infoToolStripMenuItem.Name" xml:space="preserve">
+    <value>infoToolStripMenuItem</value>
+  </data>
+  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="toolStripFileSaveButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="&gt;&gt;optionsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStripTop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listFoldersToolStripMenuItem.Name" xml:space="preserve">
+    <value>listFoldersToolStripMenuItem</value>
+  </data>
+  <data name="toolStripAnalyzeFolderCountButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="includedFileExtensionsListBoxLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="includedFileExtensionsListBoxLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>755, 27</value>
+  </data>
+  <data name="menuStripTop.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="selectSourceFilesButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 415</value>
+  </data>
+  <data name="changeActionsListSaveLocation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>415, 67</value>
+  </data>
+  <data name="optionsRemoveIdenticalFilesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 105</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;includedFileExtensionsListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="requestToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="&gt;&gt;fileNameInputTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripFileSaveButton.Name" xml:space="preserve">
+    <value>toolStripFileSaveButton</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="optionsSaveActionsListCheckbox.Text" xml:space="preserve">
+    <value>Save actions list</value>
+  </data>
+  <data name="&gt;&gt;helpToolStripMenuItem.Name" xml:space="preserve">
+    <value>helpToolStripMenuItem</value>
+  </data>
+  <data name="addFileExtensioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;menuStripTop.Name" xml:space="preserve">
+    <value>menuStripTop</value>
+  </data>
+  <data name="toolStripAnalyzeListFilesButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="optionsLeaveSourceFilesCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="optionsLeaveSourceFilesCheckbox.Text" xml:space="preserve">
+    <value>Do not remove original files</value>
+  </data>
+  <data name="optionsChangeActionsListSaveLocationButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;fileMoveProgressBar.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;optionsChangeActionsListSaveLocationButton.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;listFilesToolStripMenuItem.Name" xml:space="preserve">
+    <value>listFilesToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;includedFileExtensionsListBox.Name" xml:space="preserve">
+    <value>includedFileExtensionsListBox</value>
+  </data>
+  <data name="&gt;&gt;toolStripAnalyzeListFilesButton.Name" xml:space="preserve">
+    <value>toolStripAnalyzeListFilesButton</value>
+  </data>
+  <data name="optionsPreserveFolderSystemStructureCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;toolStripHelpInfoButton.Name" xml:space="preserve">
+    <value>toolStripHelpInfoButton</value>
+  </data>
+  <data name="&gt;&gt;changeDestinationDirectoryButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="saveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="optionsLeaveSourceFilesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 45</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listBox2.Name" xml:space="preserve">
+    <value>listBox2</value>
+  </data>
+  <data name="fileListToolStripMenuItem.Text" xml:space="preserve">
+    <value>File List</value>
+  </data>
+  <data name="&gt;&gt;toolStripHelpFeatureRequestButton.Name" xml:space="preserve">
+    <value>toolStripHelpFeatureRequestButton</value>
+  </data>
+  <data name="&gt;&gt;optionsSaveActionsListCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;optionsCaseInsensitiveCheckbox.Name" xml:space="preserve">
+    <value>optionsCaseInsensitiveCheckbox</value>
+  </data>
+  <data name="listBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 123</value>
+  </data>
+  <data name="&gt;&gt;closeToolStripMenuItem.Name" xml:space="preserve">
+    <value>closeToolStripMenuItem</value>
+  </data>
+  <data name="optionsSaveActionsListCheckbox.AccessibleName" xml:space="preserve">
+    <value>Save actions list checkbox</value>
+  </data>
+  <data name="&gt;&gt;analyzeSelectedToolStripMenuItem.Name" xml:space="preserve">
+    <value>analyzeSelectedToolStripMenuItem</value>
+  </data>
+  <data name="toolStripAnalyzeListFilesButton.Text" xml:space="preserve">
+    <value>List Files</value>
+  </data>
+  <data name="&gt;&gt;requestToolStripMenuItem.Name" xml:space="preserve">
+    <value>requestToolStripMenuItem</value>
+  </data>
+  <data name="optionsCaseInsensitiveCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;startButton.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;optionsChangeActionsListSaveLocationButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;selectSourceFilesButton.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;addFileNameButton.Name" xml:space="preserve">
+    <value>addFileNameButton</value>
+  </data>
+  <data name="&gt;&gt;saveToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;newToolStripMenuItem.Name" xml:space="preserve">
+    <value>newToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;changeDestinationDirectoryButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripAnalyzeListFoldersButton.Text" xml:space="preserve">
+    <value>List Folders</value>
+  </data>
+  <data name="&gt;&gt;sourceFilesListBox.Name" xml:space="preserve">
+    <value>sourceFilesListBox</value>
+  </data>
+  <data name="&gt;&gt;fileNameExtensionTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;exitToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="optionsSaveActionsListCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 70</value>
+  </data>
+  <data name="&gt;&gt;optionsChangeActionsListSaveLocationButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="startButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;listFilesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="changeDestinationDirectoryButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 354</value>
+  </data>
+  <data name="&gt;&gt;folderCountToolStripMenuItem.Name" xml:space="preserve">
+    <value>folderCountToolStripMenuItem</value>
+  </data>
+  <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="fileNameInputTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="analyzeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="&gt;&gt;includedFileNamesListBox.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="&gt;&gt;listBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;toolStripAnalyzeFolderCountButton.Name" xml:space="preserve">
+    <value>toolStripAnalyzeFolderCountButton</value>
+  </data>
+  <data name="&gt;&gt;analyzeSelectedToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="changeActionsListSaveLocation.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="selectSourceFilesButton.Text" xml:space="preserve">
+    <value>Select Files </value>
+  </data>
+  <data name="listFoldersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="&gt;&gt;menuStripTop.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="editToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 20</value>
+  </data>
+  <data name="listBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 123</value>
+  </data>
+  <data name="&gt;&gt;selectSourceFilesButton.Name" xml:space="preserve">
+    <value>selectSourceFilesButton</value>
+  </data>
+  <data name="fileNameInputTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>577, 292</value>
+  </data>
+  <data name="&gt;&gt;closeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileListToolStripMenuItem.Name" xml:space="preserve">
+    <value>fileListToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;sourceFilesListBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;addFileExtensioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
+  </data>
+  <data name="&gt;&gt;toolStripFileOpenButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;startButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;includedFileExtensionsListBoxLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;infoToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="menuStripTop.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;toolStripFileButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openToolStripMenuItem.Name" xml:space="preserve">
+    <value>openToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;openToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripAnalyzeFileCountButton.Name" xml:space="preserve">
+    <value>toolStripAnalyzeFileCountButton</value>
+  </data>
+  <data name="&gt;&gt;includedFileNamesListBoxLabel.Name" xml:space="preserve">
+    <value>includedFileNamesListBoxLabel</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="fileMoveProgressBarLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;toolStripFileButton.Name" xml:space="preserve">
+    <value>toolStripFileButton</value>
+  </data>
+  <data name="&gt;&gt;startButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;optionsSaveActionsListCheckbox.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;leaveSourceFilesCheckbox.Name" xml:space="preserve">
+    <value>leaveSourceFilesCheckbox</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="&gt;&gt;editToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="toolStripAnalyzeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="toolStripAnalyzeFileCountButton.Text" xml:space="preserve">
+    <value>File Count</value>
+  </data>
+  <data name="&gt;&gt;analyzeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <metadata name="menuStripTop.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="selectFilesDialouge.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>132, 19</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>70</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>en</value>

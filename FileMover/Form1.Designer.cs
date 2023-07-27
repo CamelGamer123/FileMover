@@ -200,7 +200,7 @@
             // 
             selectFilesDialouge.FileName = "selectFilesDialougeResult";
             resources.ApplyResources(selectFilesDialouge, "selectFilesDialouge");
-            selectFilesDialouge.InitialDirectory = "C:\\";
+            selectFilesDialouge.InitialDirectory = "C:\\Users\\kylep\\source\\repos\\FileMover\\FileMover\\";
             selectFilesDialouge.ShowHiddenFiles = true;
             // 
             // includedFileNamesListBox
