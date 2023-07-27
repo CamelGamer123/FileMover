@@ -59,6 +59,8 @@
             addFileNameButton = new Button();
             fileNameExtensionTextBox = new TextBox();
             addFileExtensioButton = new Button();
+            optionsRemoveIdenticalFilesCheckbox = new CheckBox();
+            optionsCaseInsensitiveCheckbox = new CheckBox();
             menuStripTop.SuspendLayout();
             SuspendLayout();
             // 
@@ -215,7 +217,6 @@
             // 
             resources.ApplyResources(includedFileNamesListBoxLabel, "includedFileNamesListBoxLabel");
             includedFileNamesListBoxLabel.Name = "includedFileNamesListBoxLabel";
-            includedFileNamesListBoxLabel.Click += label1_Click;
             // 
             // includedFileExtensionsListBoxLabel
             // 
@@ -233,6 +234,7 @@
             resources.ApplyResources(addFileNameButton, "addFileNameButton");
             addFileNameButton.Name = "addFileNameButton";
             addFileNameButton.UseVisualStyleBackColor = true;
+            addFileNameButton.Click += addFileNameButton_Click;
             // 
             // fileNameExtensionTextBox
             // 
@@ -245,11 +247,26 @@
             resources.ApplyResources(addFileExtensioButton, "addFileExtensioButton");
             addFileExtensioButton.Name = "addFileExtensioButton";
             addFileExtensioButton.UseVisualStyleBackColor = true;
+            addFileExtensioButton.Click += addFileExtensionButton_Click;
+            // 
+            // optionsRemoveIdenticalFilesCheckbox
+            // 
+            resources.ApplyResources(optionsRemoveIdenticalFilesCheckbox, "optionsRemoveIdenticalFilesCheckbox");
+            optionsRemoveIdenticalFilesCheckbox.Name = "optionsRemoveIdenticalFilesCheckbox";
+            optionsRemoveIdenticalFilesCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // optionsCaseInsensitiveCheckbox
+            // 
+            resources.ApplyResources(optionsCaseInsensitiveCheckbox, "optionsCaseInsensitiveCheckbox");
+            optionsCaseInsensitiveCheckbox.Name = "optionsCaseInsensitiveCheckbox";
+            optionsCaseInsensitiveCheckbox.UseVisualStyleBackColor = true;
             // 
             // MainWindow
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(optionsCaseInsensitiveCheckbox);
+            Controls.Add(optionsRemoveIdenticalFilesCheckbox);
             Controls.Add(addFileExtensioButton);
             Controls.Add(fileNameExtensionTextBox);
             Controls.Add(addFileNameButton);
@@ -309,5 +326,7 @@
         private Button addFileNameButton;
         private TextBox fileNameExtensionTextBox;
         private Button addFileExtensioButton;
+        private CheckBox optionsRemoveIdenticalFilesCheckbox;
+        private CheckBox optionsCaseInsensitiveCheckbox;
     }
 }
