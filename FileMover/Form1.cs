@@ -1,6 +1,4 @@
-using System.Globalization;
 using Microsoft.WindowsAPICodePack.Dialogs;
-using System.Text.RegularExpressions.Generated;
 using System.Text.RegularExpressions;
 
 namespace FileMover
@@ -16,6 +14,10 @@ namespace FileMover
         private List<string> _includedFileExtensions = new List<string>();
 
         private string _destinationDirectory = "";
+        
+        Thread _updateSourceFilesListBoxThread;  // Thread to update the source files list box with the files that
+                                                 // match the file names and extensions in the included file names
+                                                 // and extensions list boxes
 
         private CommonOpenFileDialog _folderPicker = new CommonOpenFileDialog()
         {
@@ -26,8 +28,8 @@ namespace FileMover
         public MainWindow()  // Called when the window is initialized 
         {
             InitializeComponent();
-            // For some reason i need to manually set the size and contents of all elements
-
+            // Initialise the update source files list box thread
+            _updateSourceFilesListBoxThread = new Thread(UpdateSourceFilesListBox);
         }
 
         // Click events 
@@ -95,7 +97,7 @@ namespace FileMover
             {
                 _selectedDirectory = _folderPicker.FileName;
                 // Create a new thread to scan the selected directory for files
-                var thread = new Thread(() => RecursivelyScanDirectories(_folderPicker.FileName));
+                var thread = new Thread(() => RecursivelyScanDirectories());
                 thread.Start();
             }
         }
@@ -112,7 +114,7 @@ namespace FileMover
         /// to allow for the process to be run asynchronously.
         /// </summary>
         /// <param name="directory">The directory to scan</param>
-        private void RecursivelyScanDirectories(string directory)
+        private void RecursivelyScanDirectories()
         {
             // Get a dictionary of all files in the selected directory recursively structured as follows:
             // Key: File name and extension Example: 'file.txt'
@@ -120,11 +122,11 @@ namespace FileMover
             // If the file name already exists in the dictionary, add (1) to the end of the key. This will be
             // incremented until a unique key is found.
             // Example: 'file.txt' -> 'file.txt(1)'
-            Console.WriteLine(@"Scanning directory: " + directory);
+            Console.WriteLine(@"Scanning directory: " + _selectedDirectory);
             try
             {
                 // Get a list of tuples containing the file name and full file path
-                _sourceFiles = Directory.GetFiles(directory, "*", SearchOption.AllDirectories)
+                _sourceFiles = Directory.GetFiles(_selectedDirectory, "*", SearchOption.AllDirectories)
                                 .Select(file =>
                                                 new Tuple<string, string>(Path.GetFileName(file),
                                                                 Path.GetFullPath(file))).ToList();
@@ -220,11 +222,8 @@ namespace FileMover
             regexExpression += ")\\.(";
             
             // Iterate through each file extension in the included file extensions list box and add it to the regex expression
-            foreach (var fileExtension in _includedFileExtensions)
-            {
-                regexExpression += fileExtension + "|";
-            }
-            
+            regexExpression = _includedFileExtensions.Aggregate(regexExpression, (current, fileExtension) => current + (fileExtension + "|"));
+
             // Remove the last '|' character
             regexExpression = regexExpression.Remove(regexExpression.Length - 1);
             
