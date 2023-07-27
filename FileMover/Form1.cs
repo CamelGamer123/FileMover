@@ -1,5 +1,7 @@
+using System.Diagnostics;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace FileMover
 {
@@ -13,11 +15,12 @@ namespace FileMover
         private List<string> _includedFileNames = new List<string>();
         private List<string> _includedFileExtensions = new List<string>();
 
+        private List<string> _excludedFileNames = new List<string>();
+        private List<string> _excludedFileExtensions = new List<string>();
+
         private string _destinationDirectory = "";
-        
-        Thread _updateSourceFilesListBoxThread;  // Thread to update the source files list box with the files that
-                                                 // match the file names and extensions in the included file names
-                                                 // and extensions list boxes
+
+
 
         private CommonOpenFileDialog _folderPicker = new CommonOpenFileDialog()
         {
@@ -29,7 +32,6 @@ namespace FileMover
         {
             InitializeComponent();
             // Initialise the update source files list box thread
-            _updateSourceFilesListBoxThread = new Thread(UpdateSourceFilesListBox);
         }
 
         // Click events 
@@ -97,8 +99,16 @@ namespace FileMover
             {
                 _selectedDirectory = _folderPicker.FileName;
                 // Create a new thread to scan the selected directory for files
-                var thread = new Thread(() => RecursivelyScanDirectories());
-                thread.Start();
+                var thread = new Thread(RecursivelyScanDirectories);
+                thread.Start(); // Start the thread
+                // While the thread is running, display a loading message
+                MessageBox.Show(@"Loading files from directory: " + _selectedDirectory);
+
+                // Wait for the thread to finish
+                thread.Join();
+
+                var updateSourceFilesListBoxThread = new Thread(UpdateSourceFilesListBox);
+                updateSourceFilesListBoxThread.Start();
             }
         }
 
@@ -133,8 +143,24 @@ namespace FileMover
             }
             catch (UnauthorizedAccessException)
             {
-                MessageBox.Show(@"Access to the directory was denied.");
-                return;
+                // Request admin privileges by restarting the application with admin privileges
+                var startInfo = new ProcessStartInfo
+                {
+                    UseShellExecute = true,
+                    WorkingDirectory = Environment.CurrentDirectory,
+                    FileName = Application.ExecutablePath,
+                    Verb = "runas"
+                };
+                try
+                {
+                    Process.Start(startInfo);
+                }
+                catch (Exception)
+                {
+                    // The user refused the elevation.
+                    // Do nothing and return directly ...
+                    return;
+                }
             }
         }
 
@@ -164,6 +190,9 @@ namespace FileMover
             // Add the file name to the list of file names
             _includedFileNames.Add(fileNameInputTextBox.Text);
             includedFileNamesListBox.Items.Add(fileNameInputTextBox.Text);
+
+            var updateSourceFilesListBoxThread = new Thread(UpdateSourceFilesListBox);
+            updateSourceFilesListBoxThread.Start();
         }
 
         private void addFileExtensionButton_Click(object sender, EventArgs e)
@@ -192,15 +221,41 @@ namespace FileMover
             // Add the file extension to the list
             _includedFileExtensions.Add(fileNameExtensionTextBox.Text);
             includedFileExtensionsListBox.Items.Add(fileNameExtensionTextBox.Text);
+
+            // Update the source files list box
+            var updateSourceFilesListBoxThread = new Thread(UpdateSourceFilesListBox);
+            updateSourceFilesListBoxThread.Start();
         }
 
+        /// <summary>
+        /// // Updates the source files list box with the files that match the file names and extensions in the included
+        /// file names and extensions list boxes excluding the files in the excluded file names and extensions lists
+        /// </summary>
         private void UpdateSourceFilesListBox()
         {
-            // Updates the source files list box with the files that match the file names and extensions in the included file names and extensions list boxes
-
-            // Start by clearing the list of current files 
+            // Start by clearing the list of current files and creating a new list of valid files
             _includedFiles.Clear();
+            var validFiles = new List<Tuple<string, string>>();
             
+            // Iterate through each file in the source files list and check if it has been excluded
+            foreach (var file in _sourceFiles)
+            {
+                // If the file name has been excluded, skip the file
+                if (_excludedFileNames.Contains(file.Item1.Split('.')[0]))
+                {
+                    continue;
+                }
+                
+                // If the file extension has been excluded, skip the file
+                if (_excludedFileExtensions.Contains(file.Item2))
+                {
+                    continue;
+                }
+                
+                // If the file name is included, add it to the list of valid files
+                validFiles.Add(file);
+            }
+
             // Generate the regex expression to match the full file name to 
             var regexExpression = "(";
             if (optionsCaseInsensitiveCheckbox.Checked)
@@ -214,31 +269,32 @@ namespace FileMover
             {
                 regexExpression += fileName + "|";
             }
-            
+
             // Remove the last '|' character
-            regexExpression = regexExpression.Remove(regexExpression.Length - 1);
-            
+            if (regexExpression.EndsWith('|')) regexExpression = regexExpression.Remove(regexExpression.Length - 1);
+
             // Add the file extension separator to the regex expression
             regexExpression += ")\\.(";
-            
+
             // Iterate through each file extension in the included file extensions list box and add it to the regex expression
             regexExpression = _includedFileExtensions.Aggregate(regexExpression, (current, fileExtension) => current + (fileExtension + "|"));
 
             // Remove the last '|' character
-            regexExpression = regexExpression.Remove(regexExpression.Length - 1);
-            
+            if (regexExpression.EndsWith('|')) regexExpression = regexExpression.Remove(regexExpression.Length - 1);
+
             // Add the end of the regex expression
             regexExpression += ")";
-            
+
+
             // Match each filename in the source files list to the regex expression, if it matches add it to the list of included files
-            foreach (var file in _sourceFiles)
+            foreach (var file in validFiles)
             {
                 if (Regex.IsMatch(file.Item1, regexExpression))
                 {
                     _includedFiles.Add(file);
                 }
             }
-            
+
             // Add the files to the list box
             sourceFilesListBox.Items.Clear();  // Do not clear the list box until the new list is ready to be added
 
@@ -247,6 +303,71 @@ namespace FileMover
             {
                 sourceFilesListBox.Items.Add(file.Item1);
             }
+
+            // 
+        }
+
+        private void sourceFilesListBox_DoubleClick(object sender, EventArgs eventArgs)
+        {
+            if (sourceFilesListBox.SelectedItem != null)
+            {
+                // Open a new file explorer window with the file selected
+                Process.Start("explorer.exe", "/select, " + _includedFiles[sourceFilesListBox.SelectedIndex].Item2);
+            }
+        }
+
+        private void sourceFilesListBox_RightClick(object sender, EventArgs eventArgs)
+        {
+            // Check if the user has selected a file
+            if (sourceFilesListBox.SelectedItem == null)
+            {
+                return;
+            }
+            
+            // Check that the user has right clicked
+            if (eventArgs is MouseEventArgs mouseEventArgs && mouseEventArgs.Button != MouseButtons.Right)
+            {
+                return;
+            }
+            
+            // Create a new context menu
+            var contextMenu = new ContextMenuStrip();
+            
+            // Create a new menu item to open the file in explorer
+            var openFileInExplorerMenuItem = new ToolStripMenuItem("Open in Explorer");
+            openFileInExplorerMenuItem.Click += (o, args) => Process.Start("explorer.exe", "/select, " + _includedFiles[sourceFilesListBox.SelectedIndex].Item2);
+            contextMenu.Items.Add(openFileInExplorerMenuItem);
+            
+            // Create a new menu item to open the file in the default program
+            var openFileInDefaultProgramMenuItem = new ToolStripMenuItem("Open in Default Program");
+            openFileInDefaultProgramMenuItem.Click += (o, args) => Process.Start(_includedFiles[sourceFilesListBox.SelectedIndex].Item2);
+            contextMenu.Items.Add(openFileInDefaultProgramMenuItem);
+            
+            // Create a new menu item to exclude the file from the list
+            var excludeFileMenuItem = new ToolStripMenuItem("Exclude File");
+            excludeFileMenuItem.Click += (o, args) =>
+            {
+                // Remove the file from the list of included files
+                _includedFiles.RemoveAt(sourceFilesListBox.SelectedIndex);
+                
+                // Remove the file from the list box
+                sourceFilesListBox.Items.RemoveAt(sourceFilesListBox.SelectedIndex);
+            };
+            contextMenu.Items.Add(excludeFileMenuItem);
+            
+            // Create a new menu item to exclude all files with the same name
+            var excludeAllFilesWithSameNameMenuItem = new ToolStripMenuItem("Exclude All Files With Same Name");
+            excludeAllFilesWithSameNameMenuItem.Click += (o, args) =>
+            {
+                // Get the file name of the selected file
+                var fileName = _includedFiles[sourceFilesListBox.SelectedIndex].Item1;
+                
+                // Add the file to the list of excluded files
+                _excludedFileNames.Add(fileName.Split('.')[0]);
+                
+                // Refresh the source files list box
+                UpdateSourceFilesListBox();
+            };
         }
     }
 }

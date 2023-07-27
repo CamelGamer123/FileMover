@@ -61,6 +61,7 @@
             addFileExtensioButton = new Button();
             optionsRemoveIdenticalFilesCheckbox = new CheckBox();
             optionsCaseInsensitiveCheckbox = new CheckBox();
+            optionsPreserveFolderSystemStructureCheckbox = new CheckBox();
             menuStripTop.SuspendLayout();
             SuspendLayout();
             // 
@@ -145,6 +146,7 @@
             resources.ApplyResources(sourceFilesListBox, "sourceFilesListBox");
             sourceFilesListBox.FormattingEnabled = true;
             sourceFilesListBox.Name = "sourceFilesListBox";
+            sourceFilesListBox.DoubleClick += sourceFilesListBox_DoubleClick;
             // 
             // selectSourceFilesButton
             // 
@@ -261,10 +263,17 @@
             optionsCaseInsensitiveCheckbox.Name = "optionsCaseInsensitiveCheckbox";
             optionsCaseInsensitiveCheckbox.UseVisualStyleBackColor = true;
             // 
+            // optionsPreserveFolderSystemStructureCheckbox
+            // 
+            resources.ApplyResources(optionsPreserveFolderSystemStructureCheckbox, "optionsPreserveFolderSystemStructureCheckbox");
+            optionsPreserveFolderSystemStructureCheckbox.Name = "optionsPreserveFolderSystemStructureCheckbox";
+            optionsPreserveFolderSystemStructureCheckbox.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(optionsPreserveFolderSystemStructureCheckbox);
             Controls.Add(optionsCaseInsensitiveCheckbox);
             Controls.Add(optionsRemoveIdenticalFilesCheckbox);
             Controls.Add(addFileExtensioButton);
@@ -328,5 +337,6 @@
         private Button addFileExtensioButton;
         private CheckBox optionsRemoveIdenticalFilesCheckbox;
         private CheckBox optionsCaseInsensitiveCheckbox;
+        private CheckBox optionsPreserveFolderSystemStructureCheckbox;
     }
 }
