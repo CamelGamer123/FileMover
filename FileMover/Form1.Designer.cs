@@ -62,6 +62,7 @@
             optionsRemoveIdenticalFilesCheckbox = new CheckBox();
             optionsCaseInsensitiveCheckbox = new CheckBox();
             optionsPreserveFolderSystemStructureCheckbox = new CheckBox();
+            changeDestinationDirectoryButton = new Button();
             menuStripTop.SuspendLayout();
             SuspendLayout();
             // 
@@ -77,7 +78,6 @@
             resources.ApplyResources(toolStripFileButton, "toolStripFileButton");
             toolStripFileButton.DropDownItems.AddRange(new ToolStripItem[] { toolStripFileOpenButton, toolStripFileSaveButton });
             toolStripFileButton.Name = "toolStripFileButton";
-            toolStripFileButton.Click += toolStripFileButton_Click;
             // 
             // toolStripFileOpenButton
             // 
@@ -96,7 +96,6 @@
             resources.ApplyResources(toolStripAnalyzeButton, "toolStripAnalyzeButton");
             toolStripAnalyzeButton.DropDownItems.AddRange(new ToolStripItem[] { toolStripAnalyzeFileCountButton, toolStripAnalyzeFolderCountButton, toolStripAnalyzeListFilesButton, toolStripAnalyzeListFoldersButton });
             toolStripAnalyzeButton.Name = "toolStripAnalyzeButton";
-            toolStripAnalyzeButton.Click += toolStripAnalyzeButton_Click;
             // 
             // toolStripAnalyzeFileCountButton
             // 
@@ -127,7 +126,6 @@
             resources.ApplyResources(toolStripHelpButton, "toolStripHelpButton");
             toolStripHelpButton.DropDownItems.AddRange(new ToolStripItem[] { toolStripHelpFeatureRequestButton, toolStripHelpInfoButton });
             toolStripHelpButton.Name = "toolStripHelpButton";
-            toolStripHelpButton.Click += toolStripHelpButton_Click;
             // 
             // toolStripHelpFeatureRequestButton
             // 
@@ -146,6 +144,7 @@
             resources.ApplyResources(sourceFilesListBox, "sourceFilesListBox");
             sourceFilesListBox.FormattingEnabled = true;
             sourceFilesListBox.Name = "sourceFilesListBox";
+            sourceFilesListBox.Click += sourceFilesListBox_RightClick;
             sourceFilesListBox.DoubleClick += sourceFilesListBox_DoubleClick;
             // 
             // selectSourceFilesButton
@@ -160,6 +159,7 @@
             resources.ApplyResources(startButton, "startButton");
             startButton.Name = "startButton";
             startButton.UseVisualStyleBackColor = true;
+            startButton.Click += startButton_Click;
             // 
             // optionsLabel
             // 
@@ -269,10 +269,17 @@
             optionsPreserveFolderSystemStructureCheckbox.Name = "optionsPreserveFolderSystemStructureCheckbox";
             optionsPreserveFolderSystemStructureCheckbox.UseVisualStyleBackColor = true;
             // 
+            // changeDestinationDirectoryButton
+            // 
+            resources.ApplyResources(changeDestinationDirectoryButton, "changeDestinationDirectoryButton");
+            changeDestinationDirectoryButton.Name = "changeDestinationDirectoryButton";
+            changeDestinationDirectoryButton.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(changeDestinationDirectoryButton);
             Controls.Add(optionsPreserveFolderSystemStructureCheckbox);
             Controls.Add(optionsCaseInsensitiveCheckbox);
             Controls.Add(optionsRemoveIdenticalFilesCheckbox);
@@ -338,5 +345,6 @@
         private CheckBox optionsRemoveIdenticalFilesCheckbox;
         private CheckBox optionsCaseInsensitiveCheckbox;
         private CheckBox optionsPreserveFolderSystemStructureCheckbox;
+        private Button changeDestinationDirectoryButton;
     }
 }
