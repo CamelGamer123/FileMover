@@ -44,13 +44,19 @@ namespace FileMover
 
         private void toolStripFileSaveButton_Click(object sender, EventArgs eventArgs)
         {
-
+            // I have no idea what this is meant to do, figure it out later
         }
 
 
         private void toolStripAnalyzeFileCountButton_Click(object sender, EventArgs eventArgs)
         {
-
+            // Get the number of files in included in the move
+            var fileCount = _includedFiles.Count;
+            
+            // Display the number of files in a message box
+            MessageBox.Show(@"Number of files included in the current selection: " + fileCount + @"
+Number of files excluded from the current selection: " + (_sourceFiles.Count - fileCount)+ @"
+Total number of files in the selected directory: " + _sourceFiles.Count);
         }
 
         private void toolStripAnalyzeFolderCountButton_Click(object sender, EventArgs eventArgs)
@@ -305,8 +311,8 @@ namespace FileMover
 
         private void sourceFilesListBox_RightClick(object sender, EventArgs eventArgs)
         {
-            // Check if the user has selected a file
-            if (sourceFilesListBox.SelectedItem == null)
+            // return if the user has not selected a file or the click was not a right-click. Note: eventArgs is not used for this method
+            if (sourceFilesListBox.SelectedItem == null || MouseButtons != MouseButtons.Right)
             {
                 return;
             }
@@ -414,16 +420,36 @@ namespace FileMover
             foreach (var file in _includedFiles)
             {
                 // Create a new thread to move the file
-                var thread = new Thread(() => MoveFile(file.Item2));
+                var thread = new Thread(() => MoveFile(file.Item2, false));
                 thread.Start(); // Start the thread
             }
         }
 
-        private void MoveFile(string sourcePath)
+        private void MoveFile(string sourcePath, bool overWrite = false)
         {
             // Move the file to the destination directory
             FileInfo fileInfo = new FileInfo(sourcePath);
-            fileInfo.MoveTo(_destinationDirectory + "\\" + fileInfo.Name);
+
+            try
+            {
+                if (optionsLeaveSourceFilesCheckbox.Checked)
+                    fileInfo.CopyTo(_destinationDirectory + "\\" + fileInfo.Name);
+                else fileInfo.MoveTo(_destinationDirectory + "\\" + fileInfo.Name);
+            }
+            catch (IOException)
+            {
+                // Ask the user if they want to overwrite the file
+                var result = MessageBox.Show(@"The file '" + fileInfo.Name + @"' already exists in the destination directory. Do you want to overwrite it?", @"File already exists", MessageBoxButtons.YesNo);
+                
+                // If the user does not want to overwrite the file, return
+                if (result == DialogResult.No) return;
+                
+                // If the user wants to overwrite the file, overwrite the file
+                fileInfo.CopyTo(_destinationDirectory + "\\" + fileInfo.Name, true);
+                
+                // If the user cancels the overwrite, return
+                if (result == DialogResult.Cancel) return;
+            }
 
             // Update the progress bar
             fileMoveProgressBar.PerformStep();
@@ -432,14 +458,12 @@ namespace FileMover
         private void selectDestinationDirectoryButton_Click(object sender, EventArgs e)
         {
             // Check if the user has selected a destination directory
-            if (_destinationDirectory == "")
+            if (_destinationDirectory != "") return;
+            // If the user has not selected a destination directory, open the folder picker
+            if (_folderPicker.ShowDialog() == CommonFileDialogResult.Ok)
             {
-                // If the user has not selected a destination directory, open the folder picker
-                if (_folderPicker.ShowDialog() == CommonFileDialogResult.Ok)
-                {
-                    // Set the destination directory to the selected directory
-                    _destinationDirectory = _folderPicker.FileName;
-                }
+                // Set the destination directory to the selected directory
+                _destinationDirectory = _folderPicker.FileName;
             }
         }
     }
