@@ -424,7 +424,7 @@ Total number of files in the selected directory: " + _sourceFiles.Count);
                 foreach (var file in _includedFiles)
                 {
                     // Create a new thread to move the file
-                    var thread = new Thread(() => MoveFile(file.Item2, false));
+                    var thread = new Thread(() => MoveFile(file.Item2));
                     thread.Start(); // Start the thread
                 }
             }
@@ -450,7 +450,7 @@ Total number of files in the selected directory: " + _sourceFiles.Count);
                     foreach (var file in _includedFiles)
                     {
                         // Create a new thread to move the file
-                        var thread = new Thread(() => MoveFile(file.Item2, false));
+                        var thread = new Thread(() => MoveFile(file.Item2));
                         thread.Start(); // Start the thread
                     }
                 }
@@ -464,7 +464,7 @@ Total number of files in the selected directory: " + _sourceFiles.Count);
                         foreach (var file in _includedFiles)
                         {
                             // Create a new thread to move the file
-                            var thread = new Thread(() => MoveFile(file.Item2, false));
+                            var thread = new Thread(() => MoveFile(file.Item2));
                             thread.Start(); // Start the thread
                         }
                     }
@@ -474,7 +474,7 @@ Total number of files in the selected directory: " + _sourceFiles.Count);
 
         }
 
-        private void MoveFile(string sourcePath, bool overWrite = false)
+        private void MoveFile(string sourcePath)
         {
             // Move the file to the destination directory
             FileInfo fileInfo = new FileInfo(sourcePath);
