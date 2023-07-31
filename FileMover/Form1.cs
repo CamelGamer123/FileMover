@@ -417,7 +417,7 @@ Total number of files in the selected directory: " + _sourceFiles.Count);
         private void MoveSelectedFiles()
         {
             // Check if there are any name conflicts
-            if (optionsOverwriteOldFilesCheckbox.Checked)  // TODO: Actually make the checkbox in vs
+            if (optionsOverwriteOldFilesCheckbox.Checked)
             {
                 // If the user wants to overwrite files, move the files
                 // Loop through all files in the source files list box
