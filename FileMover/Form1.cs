@@ -468,6 +468,8 @@ Total number of files in the selected directory: " + _sourceFiles.Count);
                             thread.Start(); // Start the thread
                         }
                     }
+                    // Create a new messagebox saying that the file move was cancelled
+                    MessageBox.Show(@"File move cancelled.");
                 }
             }
 
