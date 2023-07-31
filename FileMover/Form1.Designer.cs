@@ -63,6 +63,7 @@
             optionsCaseInsensitiveCheckbox = new CheckBox();
             optionsPreserveFolderSystemStructureCheckbox = new CheckBox();
             selectDestinationDirectoryButton = new Button();
+            optionsOverwriteOldFilesCheckbox = new CheckBox();
             menuStripTop.SuspendLayout();
             SuspendLayout();
             // 
@@ -276,10 +277,17 @@
             selectDestinationDirectoryButton.UseVisualStyleBackColor = true;
             selectDestinationDirectoryButton.Click += selectDestinationDirectoryButton_Click;
             // 
+            // optionsOverwriteOldFilesCheckbox
+            // 
+            resources.ApplyResources(optionsOverwriteOldFilesCheckbox, "optionsOverwriteOldFilesCheckbox");
+            optionsOverwriteOldFilesCheckbox.Name = "optionsOverwriteOldFilesCheckbox";
+            optionsOverwriteOldFilesCheckbox.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(optionsOverwriteOldFilesCheckbox);
             Controls.Add(selectDestinationDirectoryButton);
             Controls.Add(optionsPreserveFolderSystemStructureCheckbox);
             Controls.Add(optionsCaseInsensitiveCheckbox);
@@ -347,5 +355,6 @@
         private CheckBox optionsCaseInsensitiveCheckbox;
         private CheckBox optionsPreserveFolderSystemStructureCheckbox;
         private Button selectDestinationDirectoryButton;
+        private CheckBox optionsOverwriteOldFilesCheckbox;
     }
 }

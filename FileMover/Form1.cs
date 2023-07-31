@@ -52,10 +52,10 @@ namespace FileMover
         {
             // Get the number of files in included in the move
             var fileCount = _includedFiles.Count;
-            
+
             // Display the number of files in a message box
             MessageBox.Show(@"Number of files included in the current selection: " + fileCount + @"
-Number of files excluded from the current selection: " + (_sourceFiles.Count - fileCount)+ @"
+Number of files excluded from the current selection: " + (_sourceFiles.Count - fileCount) + @"
 Total number of files in the selected directory: " + _sourceFiles.Count);
         }
 
@@ -381,14 +381,14 @@ Total number of files in the selected directory: " + _sourceFiles.Count);
             // This is a dual-purpose button, it can be used to select the destination directory or to start and stop the file moving process
             // Create the file moving thread
             var moveFilesThread = new Thread(MoveSelectedFiles);
-            
+
             // Check if the sourceFilesList
             if (_includedFiles.Count < 1)
             {
                 // If the source files list is empty, display an error message
                 MessageBox.Show(@"No files to move selected. Please select files to move.");
             }
-            
+
             else if (_destinationDirectory == "")
             {
                 // If the destination directory has not been selected, display an error message
@@ -397,18 +397,18 @@ Total number of files in the selected directory: " + _sourceFiles.Count);
             // Start the file moving process
             moveFilesThread.Start();
             startButton.Text = @"Stop";
-            
+
             if (moveFilesThread.IsAlive)
             {
                 // Stop the file moving process
                 moveFilesThread.Interrupt();
-                
+
                 // Reset the progress bar
                 fileMoveProgressBar.Value = 0;
-                
+
                 // Display a message to the user
                 MessageBox.Show(@"File moving process stopped.");
-                
+
                 // Reset the button text
                 startButton.Text = @"Start";
             }
@@ -417,7 +417,7 @@ Total number of files in the selected directory: " + _sourceFiles.Count);
         private void MoveSelectedFiles()
         {
             // Check if there are any name conflicts
-            if (optionsOverwriteFilesCheckbox.Checked)  // TODO: Actually make the checkbox in vs
+            if (optionsOverwriteOldFilesCheckbox.Checked)  // TODO: Actually make the checkbox in vs
             {
                 // If the user wants to overwrite files, move the files
                 // Loop through all files in the source files list box
@@ -470,8 +470,8 @@ Total number of files in the selected directory: " + _sourceFiles.Count);
                     }
                 }
             }
-            
-            
+
+
         }
 
         private void MoveFile(string sourcePath, bool overWrite = false)
@@ -489,13 +489,13 @@ Total number of files in the selected directory: " + _sourceFiles.Count);
             {
                 // Ask the user if they want to overwrite the file
                 var result = MessageBox.Show(@"The file '" + fileInfo.Name + @"' already exists in the destination directory. Do you want to overwrite it?", @"File already exists", MessageBoxButtons.YesNo);
-                
+
                 // If the user does not want to overwrite the file, return
                 if (result == DialogResult.No) return;
-                
+
                 // If the user wants to overwrite the file, overwrite the file
                 fileInfo.CopyTo(_destinationDirectory + "\\" + fileInfo.Name, true);
-                
+
                 // If the user cancels the overwrite, return
                 if (result == DialogResult.Cancel) return;
             }
