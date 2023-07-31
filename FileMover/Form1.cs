@@ -416,13 +416,62 @@ Total number of files in the selected directory: " + _sourceFiles.Count);
 
         private void MoveSelectedFiles()
         {
-            // Loop through all files in the source files list box
-            foreach (var file in _includedFiles)
+            // Check if there are any name conflicts
+            if (optionsOverwriteFilesCheckbox.Checked)
             {
-                // Create a new thread to move the file
-                var thread = new Thread(() => MoveFile(file.Item2, false));
-                thread.Start(); // Start the thread
+                // If the user wants to overwrite files, move the files
+                // Loop through all files in the source files list box
+                foreach (var file in _includedFiles)
+                {
+                    // Create a new thread to move the file
+                    var thread = new Thread(() => MoveFile(file.Item2, false));
+                    thread.Start(); // Start the thread
+                }
             }
+            else
+            {
+                // If the user does not want to overwrite files, check if there are any name conflicts
+                var nameConflicts = false;
+                foreach (var file in _includedFiles)
+                {
+                    // Check if the file already exists in the destination directory
+                    if (File.Exists(_destinationDirectory + "\\" + file.Item1))
+                    {
+                        // If the file already exists, set the nameConflicts variable to true
+                        nameConflicts = true;
+                        break;
+                    }
+                }
+
+                // If there are no name conflicts, move the files
+                if (!nameConflicts)
+                {
+                    // Loop through all files in the source files list box
+                    foreach (var file in _includedFiles)
+                    {
+                        // Create a new thread to move the file
+                        var thread = new Thread(() => MoveFile(file.Item2, false));
+                        thread.Start(); // Start the thread
+                    }
+                }
+                else
+                {
+                    // If there are name conflicts, ask the user if they want to overwrite the files
+                    var result = MessageBox.Show(@"There are name conflicts with the files you are trying to move. Do you want to overwrite the files?", @"Name conflicts", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        // Loop through all files in the source files list box
+                        foreach (var file in _includedFiles)
+                        {
+                            // Create a new thread to move the file
+                            var thread = new Thread(() => MoveFile(file.Item2, false));
+                            thread.Start(); // Start the thread
+                        }
+                    }
+                }
+            }
+            
+            
         }
 
         private void MoveFile(string sourcePath, bool overWrite = false)
