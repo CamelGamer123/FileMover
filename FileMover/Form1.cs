@@ -1,6 +1,8 @@
 using System.Diagnostics;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using System.Text.RegularExpressions;
+using FileMover.Properties;
+using FileMover.Properties;
 
 namespace FileMover
 {
@@ -9,22 +11,20 @@ namespace FileMover
     {
         private string _selectedDirectory = "";
         private List<Tuple<string, string>> _sourceFiles = new List<Tuple<string, string>>();  // NOT THE SAME AS THE LIST BOX, THIS IS A LIST OF ALL FILES IN THE SELECTED DIRECTORY
-        private List<Tuple<string, string>> _includedFiles = new List<Tuple<string, string>>();  // This the list of files that will be moved to the destination directory
+        private readonly List<Tuple<string, string>> _includedFiles = new List<Tuple<string, string>>();  // This the list of files that will be moved to the destination directory
 
-        private List<string> _includedFileNames = new List<string>();
-        private List<string> _includedFileExtensions = new List<string>();
+        private readonly List<string> _includedFileNames = new List<string>();
+        private readonly List<string> _includedFileExtensions = new List<string>();
 
-        private List<string> _excludedFileNames = new List<string>();
-        private List<string> _excludedFileExtensions = new List<string>();
+        private readonly List<string> _excludedFileNames = new List<string>();
+        private readonly List<string> _excludedFileExtensions = new List<string>();
 
         private string _destinationDirectory = "";
 
 
-        private CommonOpenFileDialog _folderPicker = new CommonOpenFileDialog()
-        {
-            IsFolderPicker = true,
-            InitialDirectory = @"C:\Users\kylep\source\repos\FileMover\FileMover\Downloads"
-        };
+        private readonly CommonOpenFileDialog _folderPicker;
+
+        private readonly CommonOpenFileDialog _filePicker;
 
         public MainWindow()  // Called when the window is initialized 
         {
@@ -33,77 +33,95 @@ namespace FileMover
             // Set the progress bar to the correct values
             fileMoveProgressBar.Minimum = 0;
             fileMoveProgressBar.Step = 1;
+            
+            // Initialise the file dialogues
+            _folderPicker = new CommonOpenFileDialog
+            {
+                IsFolderPicker = true,
+                InitialDirectory = @"C:\Users\kylep\source\repos\FileMover\FileMover\Downloads" // TODO: Change this to initialise in the user's desktop directory
+            };
+            
+            _filePicker = new CommonOpenFileDialog
+            {
+                IsFolderPicker = false,
+                InitialDirectory = @"C:\Users\kylep\source\repos\FileMover\FileMover\Downloads"
+            };
         }
 
         // Click events
 
         private void toolStripFileOpenButton_Click(object sender, EventArgs eventArgs)
         {
-            selectSourceFilesButton_Click(sender, eventArgs);
+            selectSourceFilesButton_Click(sender, eventArgs);  // This is not the cleanest, this should use some combined logic instead
         }
 
         private void toolStripFileSaveButton_Click(object sender, EventArgs eventArgs)
         {
-            // I have no idea what this is meant to do, figure it out later
+            // This should open a dialouge box asking what the user wishes to save, with the options: current selection or 
+            // all files. Each of these should ask what format they wish to be saved in. For this, i will need to build 
+            // a parser. That will be fun...
         }
 
 
         private void toolStripAnalyzeFileCountButton_Click(object sender, EventArgs eventArgs)
         {
             // Get the number of files in included in the move
-            var fileCount = _includedFiles.Count;
+            int fileCount = _includedFiles.Count;
 
             // Display the number of files in a message box
-            MessageBox.Show(@"Number of files included in the current selection: " + fileCount + @"
-Number of files excluded from the current selection: " + (_sourceFiles.Count - fileCount) + @"
-Total number of files in the selected directory: " + _sourceFiles.Count);
+            MessageBox.Show(string.Format(Resources.MainWindow_toolStripAnalyzeFileCountButton_Click_IncludedFiles, fileCount) +
+                string.Format(Resources.MainWindow_toolStripAnalyzeFileCountButton_Click_ExcludedFiles, _sourceFiles.Count - fileCount) +
+                string.Format(Resources.MainWindow_toolStripAnalyzeFileCountButton_Click_TotalFiles, _sourceFiles.Count));
         }
 
         private void toolStripAnalyzeFolderCountButton_Click(object sender, EventArgs eventArgs)
         {
-
+            // TODO: Analyse the number of folders in the selection
         }
 
         private void toolStripAnalyzeListFilesButton_Click(object sender, EventArgs eventArgs)
         {
-
+            // TODO: Create a list of files in the selection
         }
 
         private void toolStripAnalyzeListFoldersButton_Click(object sender, EventArgs eventArgs)
         {
-
+            // TODO: Create a list of folders in the selection
         }
 
 
         private void toolStripHelpFeatureRequestButton_Click(object sender, EventArgs eventArgs)
         {
-
+            /* TODO: Get the feature request working. Opens a dialouge box asking if they want to either open on github
+             and create an issue or email me with the feature. */
         }
 
         private void toolStripHelpInfoButton_Click(object sender, EventArgs eventArgs)
         {
-
+            // TODO: Create the info button dialouge, idk what will be here. 
         }
 
         // Main UI Elements
 
         private void selectSourceFilesButton_Click(object sender, EventArgs eventArgs)
         {
-            if (_folderPicker.ShowDialog() == CommonFileDialogResult.Ok)
-            {
-                _selectedDirectory = _folderPicker.FileName;
-                // Create a new thread to scan the selected directory for files
-                var thread = new Thread(RecursivelyScanDirectories);
-                thread.Start(); // Start the thread
-                // While the thread is running, display a loading message
-                MessageBox.Show(@"Loading files from directory: " + _selectedDirectory);
+            // TODO: Create a dialogue box asking if they want to select a directory or scan a file with a list of directories
+            
+            if (_folderPicker.ShowDialog() != CommonFileDialogResult.Ok) return;
+            _selectedDirectory = _folderPicker.FileName;
+            
+            // Create a new thread to scan the selected directory for files
+            var thread = new Thread(RecursivelyScanDirectories);
+            thread.Start(); // Start the thread
+            
+            // While the thread is running, display a loading message
+            MessageBox.Show(@"Loading files from directory: " + _selectedDirectory);
 
-                // Wait for the thread to finish
-                thread.Join();
+            // Wait for the thread to finish
+            thread.Join();
 
-                var updateSourceFilesListBoxThread = new Thread(UpdateSourceFilesListBox);
-                updateSourceFilesListBoxThread.Start();
-            }
+            var updateSourceFilesListBoxThread = new Thread(UpdateSourceFilesListBox);
+            updateSourceFilesListBoxThread.Start();
         }
 
         private void actionsListSaveLocationChangeButton_Click(object sender, EventArgs eventArgs)
@@ -490,7 +508,7 @@ Total number of files in the selected directory: " + _sourceFiles.Count);
             catch (IOException)
             {
                 // Ask the user if they want to overwrite the file
-                var result = MessageBox.Show(@"The file '" + fileInfo.Name + @"' already exists in the destination directory. Do you want to overwrite it?", @"File already exists", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show(@"The file '" + fileInfo.Name + @"' already exists in the destination directory. Do you want to overwrite it?", @"File already exists", MessageBoxButtons.YesNo);
 
                 // If the user does not want to overwrite the file, return
                 if (result == DialogResult.No) return;

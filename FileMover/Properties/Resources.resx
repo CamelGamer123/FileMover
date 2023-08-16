@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="MainWindow_toolStripAnalyzeFileCountButton_Click_IncludedFiles" xml:space="preserve">
+    <value>Number of files included in the current selection: {0}
+</value>
+    <comment>The text displayed on the first line of the message box opened on toolStripAnalyzeFileCountButton_Click</comment>
+  </data>
+  <data name="MainWindow_toolStripAnalyzeFileCountButton_Click_ExcludedFiles" xml:space="preserve">
+    <value>Number of files excluded from the current selection: {0}
+</value>
+  </data>
+  <data name="MainWindow_toolStripAnalyzeFileCountButton_Click_TotalFiles" xml:space="preserve">
+    <value>Total number of files in the selected directory: {0}</value>
+  </data>
 </root>
