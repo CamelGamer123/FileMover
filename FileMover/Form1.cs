@@ -439,10 +439,8 @@ namespace FileMover
             {
                 // If the user wants to overwrite files, move the files
                 // Loop through all files in the source files list box
-                foreach (var file in _includedFiles)
+                foreach (Thread? thread in _includedFiles.Select(file => new Thread(() => MoveFile(file.Item2))))
                 {
-                    // Create a new thread to move the file
-                    var thread = new Thread(() => MoveFile(file.Item2));
                     thread.Start(); // Start the thread
                 }
             }
