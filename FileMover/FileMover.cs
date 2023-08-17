@@ -23,8 +23,7 @@ public class FileMover
 
     private readonly bool _parallel;
 
-    private readonly object _globalLock = new();  // Lock object for thread-safety. This will slow down code but without
-                                                  // it scanning multiple directories would not work
+    private readonly object _globalLock = new();  // Lock object for thread-safety. This will slow down code but without it scanning multiple directories would not work
     private readonly object _sourceFilesLock = new();
     private readonly object _criteriaLock = new();
     
@@ -55,6 +54,12 @@ public class FileMover
         DestinationDirectory = destinationDirectory;
     }
     
+    public FileMover(bool parallel = true)
+    {
+        _parallel = parallel;
+        DestinationDirectory = new DirectoryInfo(@"C:\Users");  // This is a temporary fix for the DestinationDirectory not being set
+    }
+    
     /// <summary>
     /// Opens a folder and recursively scans for all data inside it. 
     /// </summary>
@@ -77,7 +82,7 @@ public class FileMover
         List<Tuple<string, string, string>> files = directory.GetFiles("*", SearchOption.AllDirectories).Select(file => 
                         new Tuple<string, string, string>(file.FullName, file.Name, file.Extension)).ToList();
 
-        lock (_globalLock)
+        lock (_sourceFilesLock)
         {
             // Add all files in the list to the SourceFiles variable
             _sourceFiles.AddRange(files);
@@ -88,7 +93,9 @@ public class FileMover
     public void OpenFolders(List<string> folderPaths)
     {
         List<DirectoryInfo> folders = new List<DirectoryInfo>();
-
+        
+        // TODO: Convert this to a LINQ expression for release
+        // ReSharper disable once ForeachCanBeConvertedToQueryUsingAnotherGetEnumerator
         foreach (string folder in folderPaths) {
             folders.Add(new DirectoryInfo(folder));
         }
@@ -107,6 +114,7 @@ public class FileMover
         }
         
         // TODO: Convert this to a LINQ expression for release
+        // ReSharper disable once ForeachCanBePartlyConvertedToQueryUsingAnotherGetEnumerator
         foreach (DirectoryInfo directory in directories)
         {
             Thread thread = new(() => OpenFolder(directory));  // This is hard to debug, but I don't know of any better ways to do it.
@@ -123,28 +131,35 @@ public class FileMover
         // Start by clearing the selected files
         SelectedFiles.Clear();
 
-        List<Tuple<string, string, string>> validFiles = new List<Tuple<string, string, string>>();
+        List<Tuple<string, string, string>> validFiles = new();
 
-        List<string> regexList = new List<string>();  // This is here to reduce string reassignment, as it is slow
+        List<string> regexList = new();  // This is here to reduce string reassignment, as it is slow
         
         // Iterate through each file in the source files list and check if it has been excluded
-        // Convert this to a LINQ expression before release
-        foreach (Tuple<string, string, string> file in _sourceFiles)
+        // TODO: Test if surrounding the whole foreach loop in a lock is faster than attaining a releasing the lock for each iteration
+        lock (_sourceFilesLock) 
         {
-            // If the file name has been excluded, skip the file
-            if (ExcludedNameCriteria.Contains(file.Item2.Split('.')[0]))
+            // TODO: Convert this to a LINQ expression before release
+            foreach (Tuple<string, string, string> file in _sourceFiles)
             {
-                continue;
-            }
+                lock (_criteriaLock)
+                {
+                    // If the file name has been excluded, skip the file
+                    if (ExcludedNameCriteria.Contains(file.Item2.Split('.')[0]))
+                    {
+                        continue;
+                    }
 
-            // If the file extension has been excluded, skip the file
-            if (ExcludedExtensionCriteria.Contains(file.Item2))
-            {
-                continue;
-            }
+                    // If the file extension has been excluded, skip the file
+                    if (ExcludedExtensionCriteria.Contains(file.Item2))
+                    {
+                        continue;
+                    }
+                }
 
-            // If the file name is included, add it to the list of valid files
-            validFiles.Add(file);
+                // If the file name is included, add it to the list of valid files
+                validFiles.Add(file);
+            }
         }
 
         // Generate the regex expression to match the full file name to 
@@ -156,10 +171,14 @@ public class FileMover
         }
 
         // Iterate through each file name in the included file names list box and add it to the regex expression
-        // Convert this to a LINQ expression before release
-        foreach (string fileName in IncludedNameCriteria)
+        // TODO: Convert this to a LINQ expression before release
+        // ReSharper disable once ForeachCanBeConvertedToQueryUsingAnotherGetEnumerator
+        lock (_criteriaLock)
         {
-            regexList.Add(fileName + "|");  // TODO: Test this speed vs adding the filename and then adding the | in the next row
+            foreach (string fileName in IncludedNameCriteria)
+            {
+                regexList.Add(fileName + "|"); // TODO: Test this speed vs adding the filename and then adding the | in the next row
+            }
         }
 
         // Remove the last '|' character
@@ -169,24 +188,25 @@ public class FileMover
         regexList.Add(")\\.(");
 
         // Iterate through each file extension in the included file extensions list box and add it to the regex expression
-        // Convert this to a LINQ expression before release
-        foreach (string includedExtension in IncludedExtensionCriteria)
+        // TODO: this to a LINQ expression before release
+        // ReSharper disable once ForeachCanBeConvertedToQueryUsingAnotherGetEnumerator
+        lock (_criteriaLock)
         {
-            regexList.Add(includedExtension + "|");
+            foreach (string includedExtension in IncludedExtensionCriteria)
+            {
+                regexList.Add(includedExtension + "|");
+            }
         }
-        
 
-        // Remove the last '|' character
-        if (regexList.Last() == "|") regexList.RemoveAt(regexList.Count - 1);
-
-        // Add the end of the regex expression
-        regexList.Add(")");
+        if (regexList.Last() == "|") regexList.RemoveAt(regexList.Count - 1); // Remove the last '|' character
+        regexList.Add(")"); // Add the end of the regex expression
 
         // Convert the list of regex data to a valid regex string
         string regexExpression = string.Join("", regexList);  
         
         // Match each filename in the source files list to the regex expression, if it matches add it to the list of included files
-        // Convert this to a LINQ expression before release
+        // TODO: Convert this to a LINQ expression before release
+        // ReSharper disable once ForeachCanBePartlyConvertedToQueryUsingAnotherGetEnumerator
         foreach (Tuple<string, string, string> file in validFiles)
         {
             if (Regex.IsMatch(file.Item2, regexExpression))
