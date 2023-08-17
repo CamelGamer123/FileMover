@@ -126,7 +126,7 @@ public class FileMover
     /// <summary>
     /// Updates the selected files list from the selection criteria. Use `await Task.Run()` for this method as it is CPU bound.
     /// </summary>
-    public async Task UpdateSelectedFiles(bool caseInsensitive)
+    public void UpdateSelectedFiles(bool caseInsensitive)
     {
         // Start by clearing the selected files
         SelectedFiles.Clear();

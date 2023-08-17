@@ -24,7 +24,9 @@ namespace FileMover
         private readonly CommonOpenFileDialog _folderPicker;
 
         private readonly CommonOpenFileDialog _filePicker;
-
+        
+        // TODO: Add an ability to remove file names and extensions from the list and even modify them
+        
         public MainWindow()  // Called when the window is initialized 
         {
             InitializeComponent();
@@ -257,17 +259,26 @@ namespace FileMover
         /// // Updates the source files list box with the files that match the file names and extensions in the included
         /// file names and extensions list boxes excluding the files in the excluded file names and extensions lists
         /// </summary>
-        private async void UpdateSourceFilesListBox()
+        private void UpdateSourceFilesListBox()
         {
             // Start by clearing the list of current files and creating a new list of valid files
-            await _fileMover.UpdateSelectedFiles(optionsCaseInsensitiveCheckbox.Checked);
+            _fileMover.UpdateSelectedFiles(optionsCaseInsensitiveCheckbox.Checked);
             
-            // Add the files to the list box
-            sourceFilesListBox.Items.Clear();  // Do not clear the list box until the new list is ready to be added
-
+            // Do not clear the list box until the new list is ready to be added
+            if (sourceFilesListBox.InvokeRequired)  // Check if this is running in the main thread
+            {
+                Action safeClear = delegate { sourceFilesListBox.Items.Clear(); };
+                sourceFilesListBox.Invoke(safeClear);
+            }
+            else  // If it is, Items.Clear can be called safely. 
+            {
+                sourceFilesListBox.Items.Clear();
+            }
+            
             // Iterate through and add each file to the source files list box 
             foreach (Tuple<string, string, string> file in _fileMover.SelectedFiles)
             {
+                
                 sourceFilesListBox.Items.Add(file.Item2);
             }
 
@@ -275,12 +286,15 @@ namespace FileMover
             fileMoveProgressBar.Maximum = _includedFiles.Count;
         }
 
+        delegate void ClearSourceFilesListBox();
         private void sourceFilesListBox_DoubleClick(object sender, EventArgs eventArgs)
         {
             if (sourceFilesListBox.SelectedItem != null)
             {
                 // Open a new file explorer window with the file selected
-                Process.Start("explorer.exe", "/select, " + _includedFiles[sourceFilesListBox.SelectedIndex].Item2);
+                Debug.WriteLine($"Debug: {sourceFilesListBox.SelectedIndex}");
+                Debug.WriteLine($"Debug: {_includedFiles.Count}");
+                Process.Start("explorer.exe", "/select, " + _includedFiles[sourceFilesListBox.SelectedIndex].Item1);
             }
         }
 
