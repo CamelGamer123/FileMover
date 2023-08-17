@@ -2,25 +2,24 @@ using System.Diagnostics;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using System.Text.RegularExpressions;
 using FileMover.Properties;
-using FileMover.Properties;
 
 namespace FileMover
 {
     public partial class MainWindow : Form
 
     {
+        private FileMover _fileMover;
         private string _selectedDirectory = "";
-        private List<Tuple<string, string>> _sourceFiles = new List<Tuple<string, string>>();  // NOT THE SAME AS THE LIST BOX, THIS IS A LIST OF ALL FILES IN THE SELECTED DIRECTORY
-        private readonly List<Tuple<string, string>> _includedFiles = new List<Tuple<string, string>>();  // This the list of files that will be moved to the destination directory
+        private List<Tuple<string, string>> _sourceFiles = new();  // NOT THE SAME AS THE LIST BOX, THIS IS A LIST OF ALL FILES IN THE SELECTED DIRECTORY
+        private readonly List<Tuple<string, string>> _includedFiles = new();  // This the list of files that will be moved to the destination directory
 
-        private readonly List<string> _includedFileNames = new List<string>();
-        private readonly List<string> _includedFileExtensions = new List<string>();
+        private readonly List<string> _includedFileNames = new();
+        private readonly List<string> _includedFileExtensions = new();
 
-        private readonly List<string> _excludedFileNames = new List<string>();
-        private readonly List<string> _excludedFileExtensions = new List<string>();
+        private readonly List<string> _excludedFileNames = new();
+        private readonly List<string> _excludedFileExtensions = new();
 
         private string _destinationDirectory = "";
-
 
         private readonly CommonOpenFileDialog _folderPicker;
 
@@ -30,31 +29,49 @@ namespace FileMover
         {
             InitializeComponent();
 
-            // Set the progress bar to the correct values
-            fileMoveProgressBar.Minimum = 0;
-            fileMoveProgressBar.Step = 1;
-            
             // Initialise the file dialogues
             _folderPicker = new CommonOpenFileDialog
             {
                 IsFolderPicker = true,
-                InitialDirectory = @"C:\Users\kylep\source\repos\FileMover\FileMover\Downloads" // TODO: Change this to initialise in the user's desktop directory
+                InitialDirectory = @"C:\Users\" // TODO: Change this to initialise in the user's desktop directory
             };
-            
+
             _filePicker = new CommonOpenFileDialog
             {
                 IsFolderPicker = false,
-                InitialDirectory = @"C:\Users\kylep\source\repos\FileMover\FileMover\Downloads"
+                InitialDirectory = @"C:\Users\"
             };
+            
+            // Initialise the FileMover
+            _fileMover = new FileMover();
         }
 
         // Click events
 
-        private void toolStripFileOpenButton_Click(object sender, EventArgs eventArgs)
+        private void toolStripFileOpenFileButton_Click(object sender, EventArgs e)
         {
-            selectSourceFilesButton_Click(sender, eventArgs);  // This is not the cleanest, this should use some combined logic instead
+            // TODO: Implement this. It is meant to allow the user to open a file for the program to read and parse. 
         }
 
+        private void toolStripFileOpenFolderButton_Click(object sender, EventArgs e)
+        {
+            if (_folderPicker.ShowDialog() != CommonFileDialogResult.Ok) return;
+            _selectedDirectory = _folderPicker.FileName;
+
+            // Create a new thread to scan the selected directory for files
+            Thread thread = new(() => _fileMover.OpenFolder(_folderPicker.FileName));
+            thread.Start(); // Start the thread
+            
+            // While the thread is running, display a loading message
+            MessageBox.Show(@"Loading files from directory: " + _selectedDirectory);
+            
+            // Wait for the thread to finish
+            thread.Join();
+            
+            // Update the source files list box
+            new Thread(UpdateSourceFilesListBox).Start();
+        }
+        
         private void toolStripFileSaveButton_Click(object sender, EventArgs eventArgs)
         {
             // This should open a dialouge box asking what the user wishes to save, with the options: current selection or 
@@ -106,14 +123,14 @@ namespace FileMover
         private void selectSourceFilesButton_Click(object sender, EventArgs eventArgs)
         {
             // TODO: Create a dialogue box asking if they want to select a directory or scan a file with a list of directories
-            
+
             if (_folderPicker.ShowDialog() != CommonFileDialogResult.Ok) return;
             _selectedDirectory = _folderPicker.FileName;
-            
+
             // Create a new thread to scan the selected directory for files
-            var thread = new Thread(RecursivelyScanDirectories);
+            Thread thread = new Thread(RecursivelyScanDirectories);
             thread.Start(); // Start the thread
-            
+
             // While the thread is running, display a loading message
             MessageBox.Show(@"Loading files from directory: " + _selectedDirectory);
 
@@ -233,85 +250,25 @@ namespace FileMover
             includedFileExtensionsListBox.Items.Add(fileNameExtensionTextBox.Text);
 
             // Update the source files list box
-            var updateSourceFilesListBoxThread = new Thread(UpdateSourceFilesListBox);
-            updateSourceFilesListBoxThread.Start();
+            new Thread(UpdateSourceFilesListBox).Start();
         }
 
         /// <summary>
         /// // Updates the source files list box with the files that match the file names and extensions in the included
         /// file names and extensions list boxes excluding the files in the excluded file names and extensions lists
         /// </summary>
-        private void UpdateSourceFilesListBox()
+        private async void UpdateSourceFilesListBox()
         {
             // Start by clearing the list of current files and creating a new list of valid files
-            _includedFiles.Clear();
-            var validFiles = new List<Tuple<string, string>>();
-
-            // Iterate through each file in the source files list and check if it has been excluded
-            foreach (var file in _sourceFiles)
-            {
-                // If the file name has been excluded, skip the file
-                if (_excludedFileNames.Contains(file.Item1.Split('.')[0]))
-                {
-                    continue;
-                }
-
-                // If the file extension has been excluded, skip the file
-                if (_excludedFileExtensions.Contains(file.Item2))
-                {
-                    continue;
-                }
-
-                // If the file name is included, add it to the list of valid files
-                validFiles.Add(file);
-            }
-
-            // Generate the regex expression to match the full file name to 
-            var regexExpression = "(";
-            if (optionsCaseInsensitiveCheckbox.Checked)
-            {
-                // Add the case insensitive flag to the regex expression
-                regexExpression += "?i";
-            }
-
-            // Iterate through each file name in the included file names list box and add it to the regex expression
-            foreach (var fileName in _includedFileNames)
-            {
-                regexExpression += fileName + "|";
-            }
-
-            // Remove the last '|' character
-            if (regexExpression.EndsWith('|')) regexExpression = regexExpression.Remove(regexExpression.Length - 1);
-
-            // Add the file extension separator to the regex expression
-            regexExpression += ")\\.(";
-
-            // Iterate through each file extension in the included file extensions list box and add it to the regex expression
-            regexExpression = _includedFileExtensions.Aggregate(regexExpression, (current, fileExtension) => current + (fileExtension + "|"));
-
-            // Remove the last '|' character
-            if (regexExpression.EndsWith('|')) regexExpression = regexExpression.Remove(regexExpression.Length - 1);
-
-            // Add the end of the regex expression
-            regexExpression += ")";
-
-
-            // Match each filename in the source files list to the regex expression, if it matches add it to the list of included files
-            foreach (var file in validFiles)
-            {
-                if (Regex.IsMatch(file.Item1, regexExpression))
-                {
-                    _includedFiles.Add(file);
-                }
-            }
-
+            await _fileMover.UpdateSelectedFiles(optionsCaseInsensitiveCheckbox.Checked);
+            
             // Add the files to the list box
             sourceFilesListBox.Items.Clear();  // Do not clear the list box until the new list is ready to be added
 
             // Iterate through and add each file to the source files list box 
-            foreach (var file in _includedFiles)
+            foreach (Tuple<string, string, string> file in _fileMover.SelectedFiles)
             {
-                sourceFilesListBox.Items.Add(file.Item1);
+                sourceFilesListBox.Items.Add(file.Item2);
             }
 
             // Set the max of the progress bar to the number of files in the source files list box

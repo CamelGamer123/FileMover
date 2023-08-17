@@ -32,6 +32,8 @@
             menuStripTop = new MenuStrip();
             toolStripFileButton = new ToolStripMenuItem();
             toolStripFileOpenButton = new ToolStripMenuItem();
+            toolStripFileOpenFileButton = new ToolStripMenuItem();
+            toolStripFileOpenFolderButton = new ToolStripMenuItem();
             toolStripFileSaveButton = new ToolStripMenuItem();
             toolStripAnalyzeButton = new ToolStripMenuItem();
             toolStripAnalyzeFileCountButton = new ToolStripMenuItem();
@@ -50,7 +52,6 @@
             optionsChangeActionsListSaveLocationButton = new Button();
             fileMoveProgressBar = new ProgressBar();
             fileMoveProgressBarLabel = new Label();
-            selectFilesDialouge = new OpenFileDialog();
             includedFileNamesListBox = new ListBox();
             includedFileExtensionsListBox = new ListBox();
             includedFileNamesListBoxLabel = new Label();
@@ -64,6 +65,7 @@
             optionsPreserveFolderSystemStructureCheckbox = new CheckBox();
             selectDestinationDirectoryButton = new Button();
             optionsOverwriteOldFilesCheckbox = new CheckBox();
+            button1 = new Button();
             menuStripTop.SuspendLayout();
             SuspendLayout();
             // 
@@ -83,8 +85,20 @@
             // toolStripFileOpenButton
             // 
             resources.ApplyResources(toolStripFileOpenButton, "toolStripFileOpenButton");
+            toolStripFileOpenButton.DropDownItems.AddRange(new ToolStripItem[] { toolStripFileOpenFileButton, toolStripFileOpenFolderButton });
             toolStripFileOpenButton.Name = "toolStripFileOpenButton";
-            toolStripFileOpenButton.Click += toolStripFileOpenButton_Click;
+            // 
+            // toolStripFileOpenFileButton
+            // 
+            resources.ApplyResources(toolStripFileOpenFileButton, "toolStripFileOpenFileButton");
+            toolStripFileOpenFileButton.Name = "toolStripFileOpenFileButton";
+            toolStripFileOpenFileButton.Click += toolStripFileOpenFileButton_Click;
+            // 
+            // toolStripFileOpenFolderButton
+            // 
+            resources.ApplyResources(toolStripFileOpenFolderButton, "toolStripFileOpenFolderButton");
+            toolStripFileOpenFolderButton.Name = "toolStripFileOpenFolderButton";
+            toolStripFileOpenFolderButton.Click += toolStripFileOpenFolderButton_Click;
             // 
             // toolStripFileSaveButton
             // 
@@ -197,13 +211,6 @@
             resources.ApplyResources(fileMoveProgressBarLabel, "fileMoveProgressBarLabel");
             fileMoveProgressBarLabel.Name = "fileMoveProgressBarLabel";
             // 
-            // selectFilesDialouge
-            // 
-            selectFilesDialouge.FileName = "selectFilesDialougeResult";
-            resources.ApplyResources(selectFilesDialouge, "selectFilesDialouge");
-            selectFilesDialouge.InitialDirectory = "C:\\Users\\kylep\\source\\repos\\FileMover\\FileMover\\";
-            selectFilesDialouge.ShowHiddenFiles = true;
-            // 
             // includedFileNamesListBox
             // 
             resources.ApplyResources(includedFileNamesListBox, "includedFileNamesListBox");
@@ -283,10 +290,17 @@
             optionsOverwriteOldFilesCheckbox.Name = "optionsOverwriteOldFilesCheckbox";
             optionsOverwriteOldFilesCheckbox.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            resources.ApplyResources(button1, "button1");
+            button1.Name = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(button1);
             Controls.Add(optionsOverwriteOldFilesCheckbox);
             Controls.Add(selectDestinationDirectoryButton);
             Controls.Add(optionsPreserveFolderSystemStructureCheckbox);
@@ -342,7 +356,6 @@
         private Button optionsChangeActionsListSaveLocationButton;
         private ProgressBar fileMoveProgressBar;
         private Label fileMoveProgressBarLabel;
-        private OpenFileDialog selectFilesDialouge;
         private ListBox includedFileNamesListBox;
         private ListBox includedFileExtensionsListBox;
         private Label includedFileNamesListBoxLabel;
@@ -356,5 +369,8 @@
         private CheckBox optionsPreserveFolderSystemStructureCheckbox;
         private Button selectDestinationDirectoryButton;
         private CheckBox optionsOverwriteOldFilesCheckbox;
+        private Button button1;
+        private ToolStripMenuItem toolStripFileOpenFileButton;
+        private ToolStripMenuItem toolStripFileOpenFolderButton;
     }
 }
